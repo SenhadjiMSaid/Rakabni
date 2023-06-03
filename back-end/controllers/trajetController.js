@@ -21,7 +21,7 @@ exports.getTrajet = catchAsync(async (req, res, next) => {
   })
     .populate({
       path: "Conducteur",
-      select: "name photo pseudo ratingsAverage",
+      select: "name photo pseudo ratingsAverage phone",
     })
     .populate({
       path: "reviews",
@@ -64,7 +64,8 @@ exports.getUserReservations = catchAsync(async (req, res, next) => {
   const id = req.params.id;
   const trajet = await Trajet.find({ Passagers: id })
     .populate("Passagers")
-    .populate("Conducteur", "name photo");
+    .populate("Conducteur", "name photo ratingsAverage")
+    .populate("reviews");
   res.status(200).json({
     //to resive tours const array
     status: "success",
