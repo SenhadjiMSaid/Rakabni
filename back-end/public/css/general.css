@@ -222,6 +222,9 @@ body {
   display: block;
   transform: translateX(0.5rem);
 } */
+.--absolute{
+  z-index: 999;
+}
 .--absolute::before + .profile-menu-ele:hover {
   background-color: #c3e5f3;
 }

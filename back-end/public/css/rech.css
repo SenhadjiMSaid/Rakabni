@@ -435,7 +435,7 @@ input[type="checkbox"] {
 /* ****************************** */
 footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   max-width: 120rem;
   margin: 0 auto;
   gap: 2rem;
