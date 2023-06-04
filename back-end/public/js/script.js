@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
     trajetsBtns.forEach(btn=>{
       btn.addEventListener("click",function(){
         const locations = btn.querySelectorAll(".trajet-text") ;
-        const depart=locations[0].textContent.toUpperCase().split(" ").join("-");
-        const destination = locations[1].textContent.toUpperCase().split(" ").join("-") ; 
+        const depart=locations[0].textContent ;
+        const destination = locations[1].textContent ;
         if (depart && destination ){
           departMenu.value = depart ;
           destinationMenu.value = destination ;
@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const recherche = document.querySelector(".searchbar-btn");
   recherche.addEventListener("click", async (event) => {
     event.preventDefault();
+  
     const departs = document.getElementById("departs");
     const departSelection = departs.options[departs.selectedIndex].value;
     const arriver = document.getElementById("arrives");
@@ -64,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const passager = document.getElementById("passengers").value;
     var passengersSelect = document.getElementById("passengers");
     var selectedPassengers = passengersSelect.value;
+    localStorage.removeItem("selectedPassengers") ;
     localStorage.setItem("selectedPassengers", selectedPassengers);
     const url = `http://localhost:8000/api/v1/trajets?&Depart=${departSelection}&Arrivée=${arriveSelection}&date=${dateValue}&places[gte]=${passager}`;
     var passengersSelect = document.getElementById("passengers");

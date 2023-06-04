@@ -331,6 +331,7 @@ else {
   reserverTrajet.addEventListener("click", async function () {
     const url = `http://localhost:8000/api/v1/trajets/reserver/${selectedTrajetId}`;
     try {
+      const reservedPlaces = window.localStorage.getItem("selectedPassengers") ;
       const res = await fetch(url, {
         method: "POST",
         headers: {
@@ -339,7 +340,7 @@ else {
         },
         body: JSON.stringify({
           passagerId: userId,
-          places: place,
+          places: reservedPlaces,
         }),
       });
 

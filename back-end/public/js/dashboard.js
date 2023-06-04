@@ -114,7 +114,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   };
 
   profilTabInfos();
-  console.log(user);
 
   const trajetsContainer = document.querySelector(".trajets");
   const url = `http://localhost:8000/api/v1/trajets/conducteur/${userPseudo}`;
@@ -224,7 +223,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     await sortTrajetsOuReservations(reservations) ;
     const reservationsContainer = document.querySelector(".reservations");
     reservations.forEach(async function(reservation){
-      console.log(reservation) ;
       if (reservation.Conducteur) {
         const numberOfReviews = reservation.reviews.length ;
         const date = new Date(reservation.date);
@@ -365,7 +363,6 @@ document.addEventListener("DOMContentLoaded", async function () {
    const passagers = (await res1.json()).data.trajet.Passagers ;
 
   await passagers.forEach(async(psg)=> {
-    console.log(psg) ;
     const res2 = await fetch("http://localhost:8000/api/v1/users/annuler", {
     method: "POST",
     headers: {
@@ -375,7 +372,6 @@ document.addEventListener("DOMContentLoaded", async function () {
       email: psg.email,
     }),
   });
-   console.log(res2);
 }) ;
  
         const res = await fetch(
@@ -500,7 +496,7 @@ fileInput.addEventListener('change', async (event) => {
              },
              });
 
-  let photo = (await res.json()).data.doc.photo ; // array of current user trajets;
+  let photo = (await res.json()).data.doc.photo ; 
         profilePhoto.src = await URL.createObjectURL(file) ;
         userPic = photo ;
         updateUser() ;
@@ -514,29 +510,6 @@ fileInput.addEventListener('change', async (event) => {
     }
   }
 });
-
-
-
-
-
-
-
-
-
-      // document.querySelector(".head-pfp").src = `../img/user/${userPic}` ;
-      // const url = `http://localhost:8000/api/v1/users/updateMe` ;
-    /*  const res = await fetch(url,{
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-           photo:userPic ,
-        }),
-      }) ;
-      console.log(res) ;
-      if (res.ok) updateUser() ; */
 
   } ;
 
@@ -649,8 +622,9 @@ fileInput.addEventListener('change', async (event) => {
 
       if(nomComplet) userName = nomComplet ;
       if (pseudoInput) userPseudo = pseudoInput ;
-      if (telephoneInput && telephoneInput.length==10) userPhone = telephoneInput ;
-      if (emailInput) userEmail = emailInput ;
+      if (telephoneInput && telephoneInput.length==10 && telephoneInput.charAt(0) == "0" &&
+      ["5", "6", "7"].includes(telephoneInput.charAt(1))) userPhone = telephoneInput ;
+      if (emailInput ) userEmail = emailInput ;
       try{
       const url = `http://localhost:8000/api/v1/users/updateMe` ;
       const res = await fetch(url,{
@@ -667,7 +641,6 @@ fileInput.addEventListener('change', async (event) => {
         }),
       }) ;
 
-      console.log(res) ;
 
       if(res.ok){
         hideModifyContainers() ;

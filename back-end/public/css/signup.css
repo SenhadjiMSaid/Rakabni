@@ -41,11 +41,15 @@ body {
   border-radius: 30px;
   padding: 1rem;
   padding-left: 1.1rem !important;
-  display: none;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
+}
+
+.hidden{
+  display: none;
 }
 .confirm-mail-text {
   font-weight: 700;

@@ -74,10 +74,30 @@ document.addEventListener("DOMContentLoaded", (e) => {
       });
       if (!res.ok)
         throw new Error("Quelque chose ne va pas ❌, veuillez réessayer ultérieurement !");
-      data = await res.json();
-      window.location.href = "/login";
+      const data = (await res.json()) ;
+      console.log(data);
+
+      let compteActive = data.date.user.active ;
+      let newUserId = data.date.user.id ;
+      let newUserToken = data.token ;
+      const confirmerEmailMsg = document.querySelector(".confirm-mail") ;
+      if(!compteActive)  confirmerEmailMsg.classList.remove("hidden") ;
+        while(!compteActive){
+        const url = `http://localhost:8000/api/v1/users/${newUserId}`;
+        const res = await fetch(url, {
+          method: "GET",
+          headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${newUserToken}`,
+             },
+             }); 
+
+   compteActive = (await res.json()).data.doc.active ;
+            }
+
+      window.location.href="/login" ;
+      
     } catch (err) {
-      // emptyOutInputs();
       document.querySelectorAll(".erreur").forEach((txt) => txt.remove());
       const html = ` <div class="invalid erreur" style="display: flex;" >
       <p class="invalid-text">
