@@ -1,0 +1,254 @@
+/* 
+  --- 01 TYPOGRAPHY
+  - FONT SIZE SYSTEM (px):
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+
+  - Font Weights:
+  Light: 300
+  Default: 400
+  Medium: 500
+  Bold: 700
+
+  - Line Heights:
+profile-pic
+  - Letter spacing
+
+
+  --- 02 COLORS
+  - Primary: #00AFF5
+  - Tints:
+
+  - Secondary: #030045
+  - Tints:
+
+  - Greys: #767676
+
+
+  --- 03 IMAGES
+  freepik
+
+  --- 04 SHADOWS
+
+
+  --- 05 BORDER-RADIUS
+  Small: px
+  Medium: px
+  Large: px
+
+
+  --- 06 WHITESPACE
+  - SPACING SYSTEM (px) 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+  */
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  --color: #999;
+  --checked-color: #00aff5;
+  --bg-color: #e8e8e8;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  font-family: "ubuntu", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+::selection {
+  background: #72caec;
+}
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  color: #030045;
+  font-family: "ubuntu", sans-serif;
+}
+a {
+  text-decoration: none;
+  /* color: none; */
+}
+section {
+  /* margin-bottom: 5rem; */
+  display: block;
+}
+/* ****************************** */
+/* GENERAL COMPONENTS (reusables)*/
+/* ****************************** */
+.hidden {
+  display: none !important;
+}
+.hide-similar {
+  opacity: 0;
+}
+.img {
+  margin: 0;
+  width: 100%;
+}
+/* ****************************** */
+/* REUSABLE SECTIONS */
+/* ****************************** */
+/* NAVBAR */
+
+/* FOOTER */
+
+/* HELPER SETTINGS CLASSES */
+/* !important used to enforce this declaration's properties ALWAYS NO-MATTER-WHAT */
+.margin-bottom-sm {
+  margin-bottom: 1.6rem !important;
+}
+.margin-bottom-md {
+  margin-bottom: 2.4rem !important;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+.waves {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-top: -1px; 
+}
+.grid--typeA {
+  display: grid;
+  grid-template-columns: 58fr 42fr;
+  gap: 6rem;
+}
+.grid--typeB {
+  display: grid;
+  grid-template-columns: 42fr 58fr;
+  gap: 3rem;
+}
+.expriration {
+  position: absolute;
+}
+.exp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vh;
+  height: 100vh;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 120rem;
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+.container-gap {
+  gap: 0.2rem;
+}
+.error-message{
+  font-size: 2.7rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* //////////////////////////// */
+/* PROFIL CSS HANDING */
+/* //////////////////////////// */
+.nav-profile {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0px;
+}
+.profile-pic {
+  height: 5rem;
+  width: 5rem;
+  border: 3px solid #030045;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.profile-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 8.5rem;
+  top: 7rem;
+  max-width: 22rem;
+  border-radius: 1.3rem 1.3rem 1.3rem 1.3rem;
+  /* Clip the box shadows to container */
+  overflow: hidden;
+  /* Add box shadows */
+  transition: all 0.5s;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+.bbl {
+  width: 100%;
+}
+.profile-menu-ele {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  text-align: center;
+  position: relative;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: red;
+  cursor: pointer;
+}
+.profile-menu-ele:hover,
+.profile-menu-ele:active {
+  background-color: #daf4ff;
+}
+
+.profile-menu-ele:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+}
+.profile-menu-ele:not(:last-child) {
+  color: #030045;
+}
+/* .last {
+  padding-bottom: 0px;
+} */
+/* .--absolute::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 2rem solid transparent;
+  border-right: 2rem solid transparent;
+  border-bottom: 2rem solid #daf4ff;
+  display: block;
+  transform: translateX(0.5rem);
+} */
+.--absolute{
+  z-index: 999;
+}
+.--absolute::before + .profile-menu-ele:hover {
+  background-color: #c3e5f3;
+}
+/* .--absolute::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #000;
+  display: block;
+  height: 1rem;
+  width: 2rem;
+  background-color: #d8d8d8;
+} */
+
+/* .child {
+  padding-top: 0px;
+} */

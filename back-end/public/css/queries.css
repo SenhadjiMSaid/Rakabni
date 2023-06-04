@@ -1,0 +1,2033 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px
+
+/**************************/
+/* BELOW 1600px */
+/**************************/
+@media (max-width: 1571px) {
+  .info-textbubble {
+    gap: 1rem;
+  }
+
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+
+  .info-title {
+    gap: 1rem;
+  }
+  .info-title-icon {
+    height: 3rem;
+    width: 3rem;
+    padding: 1rem;
+  }
+  .info-title-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 2.2rem;
+    line-height: 3.25rem;
+  }
+}
+@media (max-width: 1520px) {
+  .info-textbubble {
+    gap: 1rem;
+  }
+
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+
+  .info-title {
+    gap: 1rem;
+  }
+  .info-title-icon {
+    height: 2.7rem;
+    width: 2.7rem;
+    padding: 0.8rem;
+  }
+  .info-title-text {
+    font-size: 2.3rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 2rem;
+    line-height: 2.9rem;
+  }
+}
+@media (max-width: 1480px) {
+  .info-textbubble {
+    gap: 1rem;
+  }
+
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+
+  .info-title {
+    gap: 1rem;
+  }
+  .info-title-icon {
+    height: 2.6rem;
+    width: 2.6rem;
+    padding: 0.9rem;
+  }
+  .info-title-text {
+    font-size: 2.3rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
+  .trajet-text {
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 1430px) {
+  .info-textbubble {
+    gap: 1rem;
+  }
+
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+
+  .info-title {
+    gap: 1rem;
+  }
+  .info-title-icon {
+    height: 2.2rem;
+    width: 2.2rem;
+    padding: 0.7rem;
+  }
+  .info-title-text {
+    font-size: 2.1rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1.95rem;
+    line-height: 2.6rem;
+  }
+}
+@media (max-width: 1359px) {
+  .header {
+    padding: 0 15rem;
+  }
+  section {
+    padding: 0 15rem;
+  }
+  .info {
+    gap: 9rem;
+  }
+  .logo {
+    height: 4.5rem;
+  }
+  .whiteicon {
+    margin-top: 0.1rem;
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+  .nav-ele span,
+  .quisommenous span,
+  .btn--signup,
+  .whitespan {
+    font-size: 1.35rem;
+  }
+  .btn--signup {
+  }
+  .nav-profile {
+    padding: 0.5rem;
+  }
+  .profile-pic {
+    margin: 0.2rem;
+    height: 3.5rem;
+    width: auto;
+    border: 2px solid #030045;
+  }
+
+  .hero-title {
+    font-size: 4.3rem;
+  }
+  .hero-subtext {
+    font-size: 1.7rem;
+  }
+  .section-hero {
+    gap: 5.2rem;
+  }
+
+  .searchbar-text-box {
+    height: 4.3rem;
+    padding: 0px 0.8rem;
+    border-radius: 14px;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 2rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 17px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  input[type="date"] {
+    font-size: 2rem;
+  }
+  .searchbar-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 2.4rem;
+  }
+  .searchbar-btn {
+    font-size: 2rem;
+    padding: 0 3rem;
+    border-radius: 14px;
+  }
+
+  .info-textbubble {
+    gap: 1rem;
+  }
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .info-title {
+    gap: 1rem;
+  }
+  .info-title-icon {
+    height: 2.2rem;
+    width: 2.2rem;
+    padding: 0.7rem;
+  }
+  .info-title-text {
+    font-size: 1.9rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+  }
+
+  .trajets-title {
+    font-size: 3.3rem;
+  }
+  .trajet-text {
+    font-size: 1.7rem;
+  }
+  .trajet-fleche {
+    height: 2.3rem;
+    width: 2.3rem;
+  }
+  .trajet-text-arrow {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+@media (max-width: 1287px) {
+  .header {
+    padding: 0 15rem;
+  }
+  section,
+  .section-info {
+    padding: 7rem 12rem;
+  }
+  .info {
+    gap: 9rem;
+  }
+  .searchbar {
+    gap: 1.7rem;
+  }
+  .searchbar-text-box {
+    height: 4.1rem;
+    padding: 0px 1rem;
+    border-radius: 10px;
+  }
+  .searchbar-text-box div {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 0.6rem;
+  }
+  .arrive {
+    margin-left: 0.6rem;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.9rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 17px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  input[type="date"] {
+    font-size: 1.8rem;
+  }
+  .searchbar-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 2rem;
+  }
+  .searchbar-btn {
+    font-size: 1.8rem;
+    padding: 0 2.5rem;
+    border-radius: 11px;
+  }
+  .info-textbubble {
+    gap: 0.7rem;
+  }
+
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+
+  .info-title {
+    gap: 1rem;
+  }
+  .info-title-icon {
+    height: 2.2rem;
+    width: 2.2rem;
+    padding: 0.7rem;
+  }
+  .info-title-text {
+    font-size: 1.9rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .trajet {
+    padding: 1.5rem 1.5rem;
+    border-radius: 17px;
+  }
+  .trajet-text {
+    font-size: 1.6rem;
+  }
+  .trajet-fleche {
+    height: 2.3rem;
+    width: 2.3rem;
+  }
+  .trajet-text-arrow {
+    height: 1.9rem;
+    width: 1.9rem;
+  }
+}
+@media (max-width: 1230px) {
+  .header {
+    padding: 0 15rem;
+  }
+  section,
+  .section-info {
+    padding: 7rem 12rem;
+  }
+  .info {
+    gap: 9rem;
+  }
+  .searchbar {
+    gap: 1.7rem;
+  }
+  .searchbar-text-box {
+    height: 4.1rem;
+    padding: 0px 1rem;
+    border-radius: 10px;
+  }
+  .searchbar-text-box div {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 0.6rem;
+  }
+  .arrive {
+    margin-left: 0.6rem;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.9rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 17px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  input[type="date"] {
+    font-size: 1.8rem;
+  }
+  .searchbar-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 2rem;
+  }
+  .searchbar-btn {
+    font-size: 1.8rem;
+    padding: 0 2.5rem;
+    border-radius: 11px;
+  }
+  .info-textbubble {
+    gap: 0.7rem;
+  }
+
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+
+  .info-title {
+    gap: 1rem;
+  }
+  .info-title-icon {
+    height: 2.2rem;
+    width: 2.2rem;
+    padding: 0.7rem;
+  }
+  .info-title-text {
+    font-size: 1.9rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .trajet {
+    padding: 1.5rem 1.5rem;
+    border-radius: 17px;
+  }
+  .trajet-text {
+    font-size: 1.6rem;
+  }
+  .trajet-fleche {
+    height: 2.3rem;
+    width: 2.3rem;
+  }
+  .trajet-text-arrow {
+    height: 1.9rem;
+    width: 1.9rem;
+  }
+}
+@media (max-width: 1199px) {
+  .header {
+    padding: 0 15rem;
+  }
+  .logo {
+    height: 3.7rem;
+  }
+  .whiteicon {
+    margin-top: 0rem;
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+  .nav-righthand {
+    gap: 1.5rem;
+  }
+  .nav-ele {
+    gap: 0.2rem;
+  }
+  .nav-ele span,
+  .quisommenous span,
+  .btn--signup,
+  .whitespan {
+    font-size: 1.05rem;
+  }
+  .btn--signup {
+    padding: 0.2rem 1.5rem;
+    border-radius: 7px;
+  }
+  .nav-profile {
+    padding: 0rem;
+  }
+  .profile-pic {
+    height: 2.7rem;
+    width: 2.7rem;
+    border: 1px solid #030045;
+  }
+
+  section,
+  .section-info {
+    padding: 0 12rem;
+  }
+  .hero-text-box {
+    gap: 1.3rem;
+  }
+  .hero-title {
+    font-size: 4.1rem;
+  }
+  .hero-subtext {
+    font-size: 1.6rem;
+  }
+  .section-hero {
+    gap: 5.2rem;
+  }
+
+  .searchbar-text-box {
+    height: 3.9rem;
+    padding: 0px 0.8rem;
+    border-radius: 11px;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.6rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 17px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  input[type="date"] {
+  }
+  .searchbar-icon {
+    height: 2.1rem;
+    width: 2.1rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .date-text,
+  .personnes-text {
+  }
+  .searchbar-btn {
+    border-radius: 12px;
+  }
+
+  .info {
+    gap: 9rem;
+  }
+  .info-textbubble {
+    gap: 1rem;
+  }
+  .info-container {
+    gap: 0.4rem;
+  }
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .info-title {
+    gap: 1rem;
+  }
+  .info-title-icon {
+    height: 1.9rem;
+    width: 1.9rem;
+    padding: 0.6rem;
+  }
+  .info-title-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+
+  .trajets {
+    padding: 0rem;
+    gap: 2.4rem;
+  }
+  .trajet {
+    padding: 1.2rem 1.2rem;
+    border-radius: 17px;
+  }
+  .trajet-text {
+    font-size: 1.6rem;
+  }
+  .trajet-fleche {
+    height: 2.3rem;
+    width: 2.3rem;
+  }
+  .trajet-text-arrow {
+    height: 1.9rem;
+    width: 1.9rem;
+  }
+}
+@media (max-width: 1161px) {
+  .trajets {
+    padding: 0rem;
+    gap: 2.4rem;
+  }
+
+  .trajets-title {
+    font-size: 1.8rem;
+  }
+  .trajet {
+    padding: 1.2rem 1.2rem;
+    border-radius: 17px;
+  }
+  .trajet-text {
+    font-size: 1.4rem;
+  }
+  .trajet-fleche {
+    height: 2.3rem;
+    width: 2.3rem;
+  }
+  .trajet-text-arrow {
+    height: 1.9rem;
+    width: 1.9rem;
+  }
+}
+@media (max-width: 1161px) {
+  .trajets {
+    padding: 0rem;
+    gap: 2.4rem;
+  }
+  .trajet {
+    padding: 0.9rem 0.9rem;
+    border-radius: 17px;
+  }
+  .trajet-text {
+    font-size: 1.2rem;
+  }
+  .trajet-fleche {
+    height: 2.3rem;
+    width: 2.3rem;
+  }
+  .trajet-text-arrow {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  .header {
+    padding: 0 15rem;
+  }
+  .logo {
+    height: 3.7rem;
+  }
+  .whiteicon {
+    margin-top: 0rem;
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+  .nav-righthand {
+    gap: 1.5rem;
+  }
+  .nav-ele {
+    gap: 0.2rem;
+  }
+  .nav-ele span,
+  .quisommenous span,
+  .btn--signup,
+  .whitespan {
+    font-size: 1.05rem;
+  }
+  .btn--signup {
+    padding: 0.2rem 1.5rem;
+    border-radius: 7px;
+  }
+  .nav-profile {
+    padding: 0rem;
+  }
+  .profile-pic {
+    height: 2.7rem;
+    width: 2.7rem;
+    border: 1px solid #030045;
+  }
+
+  section,
+  .section-info {
+    padding: 5rem 12rem;
+  }
+  .hero-text-box {
+    gap: 1.3rem;
+  }
+  .hero-title {
+    font-size: 3.8rem;
+  }
+  .hero-subtext {
+    font-size: 1.4rem;
+  }
+  .section-hero {
+    gap: 5.2rem;
+  }
+
+  .searchbar-text-box {
+    height: 3.9rem;
+    padding: 0px 0.8rem;
+    border-radius: 11px;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.6rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 17px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  input[type="date"] {
+  }
+  .searchbar-icon {
+    height: 2.1rem;
+    width: 2.1rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .date-text,
+  .personnes-text {
+  }
+  .searchbar-btn {
+    border-radius: 12px;
+  }
+
+  .info {
+    gap: 9rem;
+  }
+  .info-textbubble {
+    gap: 1rem;
+  }
+  .info-container {
+    gap: 0.4rem;
+  }
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .info-title {
+    gap: 1rem;
+  }
+  .info-title-icon {
+    height: 1.8rem;
+    width: 1.8rem;
+    padding: 0.6rem;
+  }
+  .info-title-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+}
+@media (max-width: 1115px) {
+  .searchbar {
+    gap: 1.7rem;
+  }
+  .searchbar-text-box {
+    height: 3.4rem;
+    padding: 0px 1rem;
+    border-radius: 10px;
+  }
+  .searchbar-text-box div {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 0.6rem;
+  }
+  .arrive {
+    margin-left: 0.6rem;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.5rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 13px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  input[type="date"] {
+    font-size: 1.7rem;
+  }
+  .searchbar-icon {
+    height: 2.1rem;
+    width: 2.1rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 1.8rem;
+  }
+  .searchbar-btn {
+    font-size: 1.5rem;
+    padding: 0 2.5rem;
+    border-radius: 11px;
+  }
+  .info-textbubble {
+    gap: 0.7rem;
+  }
+  .footer-title {
+    font-size: 1.5rem;
+  }
+  .footer-element {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1075px) {
+  .searchbar {
+    gap: 1.7rem;
+  }
+  .searchbar-text-box {
+    height: 3.3rem;
+    padding: 0px 1rem;
+    border-radius: 10px;
+  }
+  .searchbar-text-box div {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 0.6rem;
+  }
+  .arrive {
+    margin-left: 0.6rem;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.35rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 13px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  input[type="date"] {
+    font-size: 1.5rem;
+  }
+  .searchbar-icon {
+    height: 2.1rem;
+    width: 2.1rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 1.5rem;
+  }
+  .searchbar-btn {
+    font-size: 1.5rem;
+    padding: 0 2.5rem;
+    border-radius: 11px;
+  }
+  .info-textbubble {
+    gap: 0.7rem;
+  }
+}
+@media (max-width: 1050px) {
+  .searchbar {
+    gap: 1.7rem;
+  }
+  .searchbar-text-box {
+    height: 3.3rem;
+    padding: 0px 1rem;
+    border-radius: 10px;
+  }
+  .searchbar-text-box div {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 0.6rem;
+  }
+  .arrive {
+    margin-left: 0.6rem;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.35rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 13px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  input[type="date"] {
+    font-size: 1.5rem;
+  }
+  .searchbar-icon {
+    height: 2.1rem;
+    width: 2.1rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 1.5rem;
+  }
+  .searchbar-btn {
+    font-size: 1.5rem;
+    padding: 0 2.5rem;
+    border-radius: 11px;
+  }
+  .info-textbubble {
+    gap: 0.7rem;
+  }
+}
+@media (max-width: 1025px) {
+  .header {
+    padding: 0 13rem;
+  }
+  .logo {
+    height: 3.6rem;
+  }
+  .whiteicon {
+    margin-top: 0rem;
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+  .nav-ele span,
+  .quisommenous span,
+  .btn--signup,
+  .whitespan {
+    font-size: 1.05rem;
+  }
+  .nav-profile {
+    padding: 0px 0px;
+  }
+  .profile-pic {
+    height: 2.6rem;
+    width: auto;
+    border: 1px solid #030045;
+  }
+
+  section {
+    padding: 0 10rem;
+  }
+  .section-info {
+    padding: 5rem 10rem;
+  }
+  .section-hero {
+    gap: 4.3rem;
+    padding-bottom: 7rem;
+  }
+  .hero-text-box {
+    gap: 1.4rem;
+  }
+  .hero-title {
+    font-weight: 500;
+    font-size: 3.6rem;
+  }
+  .hero-subtext {
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+
+  .searchbar {
+    gap: 1.4rem;
+  }
+  .searchbar-text-box {
+    border-radius: 10px;
+    height: 3.1rem;
+    padding: 0px 0.7rem;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.3rem;
+  }
+  input[type="date"] {
+    font-size: 1.3rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 14px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  .searchbar-icon {
+    height: 2rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .arrive,
+  .date {
+    margin-left: 1rem;
+  }
+  .searchbar-text-box div {
+    padding: 0 0 0 0.6rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 1.6rem;
+  }
+  .searchbar-btn {
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    border-radius: 9px;
+  }
+
+  .info {
+    gap: 7rem;
+  }
+  .info-container {
+    gap: 0.8rem;
+  }
+  .info-textbubble {
+    gap: 1rem;
+  }
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .info-title {
+    gap: 0.5rem;
+  }
+  .info-title-icon {
+    height: 1.6rem;
+    width: 1.6rem;
+    padding: 0.5rem;
+  }
+  .info-title-text {
+    font-size: 1.55rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+}
+@media (max-width: 1000px) {
+  .trajets {
+    padding: 0rem;
+    gap: 2.4rem;
+  }
+  .trajet {
+    padding: 0.9rem 0.9rem;
+    border-radius: 12px;
+  }
+  .trajet-text {
+    font-size: 1.1rem;
+  }
+  .trajet-fleche {
+    height: 2rem;
+    width: 2rem;
+  }
+  .trajet-text-arrow {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+@media (max-width: 990px) {
+  .logo {
+    height: 3.3rem;
+  }
+  .whiteicon {
+    margin-top: 0rem;
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+  .nav-ele span,
+  .quisommenous span,
+  .btn--signup,
+  .whitespan {
+    font-size: 1.05rem;
+  }
+  .nav-profile {
+    padding: 0px 0px;
+  }
+  .profile-pic {
+    height: 2.1rem;
+    width: auto;
+    border: 1px solid #030045;
+  }
+
+  section {
+    padding: 0 10rem;
+  }
+  .section-hero {
+    gap: 4.3rem;
+    padding-bottom: 7rem;
+  }
+  .hero-text-box {
+    gap: 1.4rem;
+  }
+  .hero-title {
+    font-weight: 500;
+    font-size: 3.4rem;
+  }
+  .hero-subtext {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  .searchbar {
+    gap: 1.4rem;
+  }
+  .searchbar-text-box {
+    border-radius: 10px;
+    height: 3.2rem;
+    padding: 0px 0.7rem;
+  }
+  .searchbar-text-box > *:not(:last-child)::after {
+    height: 2rem;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.25rem;
+  }
+  input[type="date"] {
+    font-size: 1.45rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 13px;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .searchbar-icon {
+    height: 2.1rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .arrive,
+  .date {
+    margin-left: 1rem;
+  }
+  .searchbar-text-box div {
+    padding: 0 0 0 0.6rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 1.7rem;
+  }
+  .searchbar-btn {
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    border-radius: 10px;
+  }
+
+  .section-info {
+    padding: 4.6rem 10rem;
+  }
+  .info {
+    gap: 6rem;
+  }
+  .info-container {
+    gap: 0.9rem;
+  }
+  .info-textbubble {
+    gap: 1rem;
+  }
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .info-title {
+    gap: 0.5rem;
+  }
+  .info-title-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0.5rem;
+  }
+  .info-title-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+}
+@media (max-width: 971px) {
+  .logo {
+    height: 3.3rem;
+  }
+  .whiteicon {
+    margin-top: 0rem;
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+  .nav-ele span,
+  .quisommenous span,
+  .btn--signup,
+  .whitespan {
+    font-size: 1.05rem;
+  }
+  .nav-profile {
+    padding: 0px 0px;
+  }
+  .profile-pic {
+    height: 2.1rem;
+    width: auto;
+    border: 1px solid #030045;
+  }
+
+  section {
+    padding: 0 10rem;
+  }
+  .section-hero {
+    gap: 4.3rem;
+    padding-bottom: 7rem;
+  }
+  .hero-text-box {
+    gap: 1.4rem;
+  }
+  .hero-title {
+    font-weight: 500;
+    font-size: 3.4rem;
+  }
+  .hero-subtext {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  .searchbar {
+    gap: 1.4rem;
+  }
+  .searchbar-text-box {
+    border-radius: 10px;
+    height: 3.2rem;
+    padding: 0px 0.7rem;
+  }
+  .searchbar-text-box > *:not(:last-child)::after {
+    height: 2rem;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.25rem;
+  }
+  input[type="date"] {
+    font-size: 1.45rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 13px;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .searchbar-icon {
+    height: 2.1rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .arrive,
+  .date {
+    margin-left: 1rem;
+  }
+  .searchbar-text-box div {
+    padding: 0 0 0 0.6rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 1.7rem;
+  }
+  .searchbar-btn {
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    border-radius: 10px;
+  }
+
+  .section-info {
+    padding: 4.6rem 10rem;
+  }
+  .info {
+    gap: 6rem;
+  }
+  .info-container {
+    gap: 0.9rem;
+  }
+  .info-textbubble {
+    gap: 1rem;
+  }
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .info-title {
+    gap: 0.5rem;
+  }
+  .info-title-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0.5rem;
+  }
+  .info-title-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+}
+@media (max-width: 961px) {
+  .trajets {
+    padding: 0rem;
+    gap: 2.4rem;
+  }
+  .trajet {
+    padding: 0.6rem;
+    border-radius: 8px;
+  }
+  .trajet-text {
+    font-size: 0.9rem;
+  }
+  .trajet-fleche {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+  .trajet-text-arrow {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+}
+@media (max-width: 935px) {
+  .logo {
+    height: 3.3rem;
+  }
+  .whiteicon {
+    margin-top: 0rem;
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+  .nav-ele span,
+  .quisommenous span,
+  .btn--signup,
+  .whitespan {
+    font-size: 1.05rem;
+  }
+  .nav-profile {
+    padding: 0px 0px;
+  }
+  .profile-pic {
+    height: 2.1rem;
+    width: auto;
+    border: 1px solid #030045;
+  }
+
+  section {
+    padding: 0 10rem;
+  }
+  .section-hero {
+    gap: 4.3rem;
+    padding-bottom: 7rem;
+  }
+  .hero-text-box {
+    gap: 1.4rem;
+  }
+  .hero-title {
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  .hero-subtext {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  .searchbar {
+    gap: 1.4rem;
+  }
+  .searchbar-text-box {
+    border-radius: 10px;
+    height: 3.2rem;
+    padding: 0px 0.7rem;
+  }
+  .searchbar-text-box > *:not(:last-child)::after {
+    height: 2rem;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.25rem;
+  }
+  input[type="date"] {
+    font-size: 1.45rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 13px;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .searchbar-icon {
+    height: 2.1rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .arrive,
+  .date {
+    margin-left: 1rem;
+  }
+  .searchbar-text-box div {
+    padding: 0 0 0 0.6rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 1.7rem;
+  }
+  .searchbar-btn {
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    border-radius: 10px;
+  }
+
+  .section-info {
+    padding: 4.6rem 10rem;
+  }
+  .info {
+    gap: 6rem;
+  }
+  .info-container {
+    gap: 0.6rem;
+  }
+  .info-textbubble {
+    gap: 1rem;
+  }
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .info-title {
+    gap: 0.5rem;
+  }
+  .info-title-icon {
+    height: 1.3rem;
+    width: 1.3rem;
+    padding: 0.4rem;
+  }
+  .info-title-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+
+  .trajets {
+    padding: 0rem;
+    gap: 2.4rem;
+  }
+  .trajet {
+    padding: 0.6rem;
+    border-radius: 8px;
+  }
+  .trajet-text {
+    font-size: 0.9rem;
+  }
+  .trajet-fleche {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+  .trajet-text-arrow {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+
+  .footer-title {
+    font-size: 1.2rem;
+  }
+  .footer-element {
+    font-size: 0.8rem;
+  }
+  .sm-logo {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .footer-logo {
+    height: 2.5rem;
+  }
+}
+@media (max-width: 895px) {
+  .header {
+    padding: 0 11rem;
+  }
+  .logo {
+    height: 3.3rem;
+  }
+  .whiteicon {
+    margin-top: 0rem;
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+  .nav-ele span,
+  .quisommenous span,
+  .btn--signup,
+  .whitespan {
+    font-size: 1.05rem;
+  }
+  .nav-profile {
+    padding: 0px 0px;
+  }
+  .profile-pic {
+    height: 2.1rem;
+    width: auto;
+    border: 1px solid #030045;
+  }
+
+  .section-hero {
+    padding: 2rem 8rem;
+  }
+  .section-hero {
+    gap: 4.3rem;
+    padding-bottom: 7rem;
+  }
+  .hero-text-box {
+    gap: 1.4rem;
+  }
+  .hero-title {
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  .hero-subtext {
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  .searchbar {
+    gap: 1.4rem;
+  }
+  .searchbar-text-box {
+    border-radius: 10px;
+    height: 3.2rem;
+    padding: 0px 0.7rem;
+  }
+  .searchbar-text-box > *:not(:last-child)::after {
+    height: 2rem;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.25rem;
+  }
+  input[type="date"] {
+    font-size: 1.45rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 13px;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .searchbar-icon {
+    height: 2.1rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .arrive,
+  .date {
+    margin-left: 1rem;
+  }
+  .searchbar-text-box div {
+    padding: 0 0 0 0.6rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 1.7rem;
+  }
+  .searchbar-btn {
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    border-radius: 10px;
+  }
+
+  .section-info {
+    padding: 3.6rem 8rem;
+  }
+  .info {
+    gap: 6rem;
+  }
+  .info-container {
+    gap: 0.7rem;
+  }
+  .info-textbubble {
+    gap: 1rem;
+  }
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .info-title {
+    gap: 0.5rem;
+  }
+  .info-title-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0.5rem;
+  }
+  .info-title-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+
+  .trajets-title {
+    font-size: 1.4rem;
+  }
+  .trajets {
+    padding: 0rem;
+    gap: 2rem;
+  }
+  .trajet {
+    padding: 0.6rem;
+    border-radius: 8px;
+  }
+  .trajet-text {
+    font-size: 0.9rem;
+  }
+  .trajet-fleche {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+  .trajet-text-arrow {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+
+  .footer-title {
+    font-size: 1.2rem;
+  }
+  .footer-element {
+    font-size: 0.8rem;
+  }
+  .sm-logo {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .footer-logo {
+    height: 2.5rem;
+  }
+}
+@media (max-width: 850px) {
+  .header {
+    padding: 0 8.5rem;
+  }
+  .logo {
+    height: 3.3rem;
+  }
+  .whiteicon {
+    margin-top: 0rem;
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+  .nav-ele span,
+  .quisommenous span,
+  .btn--signup,
+  .whitespan {
+    font-size: 0.95rem;
+  }
+  .btn--signup {
+    padding: 0.1rem 1.4rem;
+    border-radius: 5px;
+  }
+  .nav-profile {
+    padding: 0px 0px;
+  }
+  .profile-pic {
+    height: 2.1rem;
+    width: auto;
+    border: 1px solid #030045;
+  }
+
+  .section-hero {
+    padding: 2rem 5.5rem;
+  }
+  .section-hero {
+    gap: 4.3rem;
+    padding-bottom: 7rem;
+  }
+  .hero-text-box {
+    gap: 1.4rem;
+  }
+  .hero-title {
+    font-weight: 500;
+    font-size: 3.2rem;
+  }
+  .hero-subtext {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .searchbar {
+    gap: 1.4rem;
+  }
+  .searchbar-text-box {
+    border-radius: 10px;
+    height: 3rem;
+    padding: 0px 0.7rem;
+  }
+  .searchbar-text-box > *:not(:last-child)::after {
+    height: 2rem;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.25rem;
+  }
+  input[type="date"] {
+    font-size: 1.45rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 13px;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .searchbar-icon {
+    height: 2.1rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .arrive,
+  .date {
+    margin-left: 1rem;
+  }
+  .searchbar-text-box div {
+    padding: 0 0 0 0.6rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 1.7rem;
+  }
+  .searchbar-btn {
+    font-size: 1.3rem;
+    padding: 0 2rem;
+    border-radius: 10px;
+  }
+
+  .section-info {
+    padding: 3.6rem 8rem;
+  }
+  .info {
+    gap: 6rem;
+  }
+  .info-container {
+    gap: 0.9rem;
+  }
+  .info-textbubble {
+    gap: 1rem;
+  }
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .info-title {
+    gap: 0.5rem;
+  }
+  .info-title-icon {
+    height: 1.4rem;
+    width: 1.4rem;
+    padding: 0.4rem;
+  }
+  .info-title-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  .trajets {
+    padding: 0rem;
+    gap: 2rem;
+  }
+  .trajet {
+    padding: 0.6rem;
+    border-radius: 8px;
+  }
+  .trajet-text {
+    font-size: 0.9rem;
+  }
+  .trajet-fleche {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+  .trajet-text-arrow {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+  .footer-element {
+    font-size: 0.7rem;
+  }
+  .sm-logo {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .footer-logo {
+    height: 2.5rem;
+  }
+}
+@media (max-width: 813px) {
+  .header {
+    padding: 0 8.5rem;
+  }
+  .logo {
+    height: 3.3rem;
+  }
+  .whiteicon {
+    margin-top: 0rem;
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+  .nav-ele span,
+  .quisommenous span,
+  .btn--signup,
+  .whitespan {
+    font-size: 0.85rem;
+  }
+  .nav-profile {
+    padding: 0px 0px;
+  }
+  .profile-pic {
+    height: 2rem;
+    width: auto;
+    border: 1px solid #030045;
+  }
+
+  .section-hero {
+    padding: 2rem 5.5rem;
+  }
+  .section-hero {
+    gap: 4.3rem;
+    padding-bottom: 7rem;
+  }
+  .hero-text-box {
+    gap: 1.4rem;
+  }
+  .hero-title {
+    font-weight: 500;
+    font-size: 3.1rem;
+  }
+  .hero-subtext {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .searchbar {
+    gap: 1.4rem;
+  }
+  .searchbar-text-box {
+    border-radius: 10px;
+    height: 3rem;
+    padding: 0px 0.7rem;
+  }
+  .searchbar-text-box > *:not(:last-child)::after {
+    height: 2rem;
+  }
+  .depart-text,
+  .arrive-text {
+    font-size: 1.25rem;
+  }
+  input[type="date"] {
+    font-size: 1.45rem;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 13px;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .searchbar-icon {
+    height: 2.1rem;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .arrive,
+  .date {
+    margin-left: 1rem;
+  }
+  .searchbar-text-box div {
+    padding: 0 0 0 0.6rem;
+  }
+  .date-text,
+  .personnes-text {
+    font-size: 1.7rem;
+  }
+  .searchbar-btn {
+    font-size: 1.3rem;
+    padding: 0 2rem;
+    border-radius: 10px;
+  }
+
+  .section-info {
+    padding: 3.6rem 8rem;
+  }
+  .info {
+    gap: 6rem;
+  }
+  .info-container {
+    gap: 0.6rem;
+  }
+  .info-textbubble {
+    gap: 1rem;
+  }
+  .bubble1 .info-container {
+    height: 80%;
+    width: 80%;
+  }
+  .bubble2 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .bubble3 .info-container {
+    height: 80%;
+    width: 75%;
+  }
+  .info-title {
+    gap: 0.5rem;
+  }
+  .info-title-icon {
+    height: 1.4rem;
+    width: 1.4rem;
+    padding: 0.4rem;
+  }
+  .info-title-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .info-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .trajets {
+    padding: 0rem;
+    gap: 2rem;
+  }
+  .trajet {
+    padding: 0.4rem;
+    border-radius: 6px;
+  }
+  .trajet-text {
+    font-size: 0.8rem;
+  }
+  .trajet-fleche {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+  .trajet-text-arrow {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+
+  .sm-logo {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .footer-logo {
+    height: 2.5rem;
+  }
+}

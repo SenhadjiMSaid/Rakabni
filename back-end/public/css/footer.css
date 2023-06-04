@@ -1,0 +1,84 @@
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 10rem 7rem;
+    /* margin: 25px; */
+    justify-content: space-around;
+    justify-items: center;
+  }
+  .copyright,
+  .contact,
+  .compte,
+  .resources {
+    display: flex;
+    flex-direction: column;
+    /* align-items: baseline; */
+    gap: 1.5rem;
+  }
+  .footer-title {
+    margin-top: 0;
+    color: #030045;
+    margin-bottom: 2rem;
+    font-size: 25px;
+  }
+  .footer-element {
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: all 500ms;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .footer-element:hover,
+  .footer-element:active {
+    color: #030045;
+    text-decoration: underline;
+    transition: all 500ms;
+  }
+  .footer-element:link,
+  .footer-element:visited {
+    color: #030045;
+  }
+  .address {
+    color: #030045;
+    cursor: auto;
+    text-decoration: none !important;
+  }
+  .footer-logo {
+    width: 100px;
+  }
+  .sm-logos {
+    display: flex;
+    gap: 1rem;
+  }
+  .sm-logo {
+    color: #767676;
+    height: 2rem;
+    width: 2rem;
+    transition: all 300ms;
+  }
+  .sociallink:hover .sm-logo,
+  .sociallink:active .sm-logo {
+    color: #444;
+  }
+  .copyright-text {
+    color: #767676;
+    margin-top: 3.5rem;
+  }
+  
+  .compte {
+    max-width: 200px;
+  }
+  
+  .contact {
+    max-width: 250px;
+  }
+  
+  .copyright {
+    max-width: 250px;
+  }
+  
+  .resources {
+    max-width: 210px;
+  }

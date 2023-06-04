@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rekebni - </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <meta charset="UTF-8" />
+    <!--Link to nav bar css style-->
+    <link rel="stylesheet" type="text/css" href="../css/addReview.css" />
+    <link rel="stylesheet" type="text/css" href="../css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="../css/navbar2.css" />
+    <link rel="stylesheet" type="text/css" href="../css/general.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../css/style.css" /> -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image" href="../img/ICON3 1.png" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- FONT LINK (UBUNTU-All) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../js/addReview.js"></script>
+    <!-- <script src="../js/addTrip.js"></script> -->
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="/">
+          <img class="logo" src="../img/LOGO22.png"le Logo de Rekebni />
+        </a>
+      </div>
+        <img class="waves2" src="../img/waves4.png" />
+    </header>
+    <div class="container">
+      <div class="ilustration">
+        <img src="../img/Online-Review-pana.png" alt="Forgot password ilustration" class="ilustration-img">
+
+      </div>
+      <form class="emailInput">
+        <div class="texte">
+          <span class="texte-title">Donnez Votre Propre Avis</span>
+          <p class="texte-text">
+            Aide nous et les autres utilsateur<br />
+            avec votre avis
+          </p>
+          <!-- In case of Valide Emaile  -->
+          <div class="valid">
+            <p class="valid-text">
+              Adresse E-Mail est valide <br />
+              Veuillez consulter votre <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">boite email</a>. 
+            </p>
+            <ion-icon
+             class="valid-icon"
+             name="mail-outline"
+             ></ion-icon>
+          </div>
+        </div>
+        <div class="input">
+
+          <div class="invalid">
+            <p class="not"> </p>
+            <p class="invalid-text">
+              Review already exists !
+            </p>
+            <ion-icon
+              class="invalid-icon"
+              name="alert-circle-outline"
+            ></ion-icon>
+          </div>
+
+					<div class="rating">
+						<input type="radio" id="star5" name="rate" value="5">
+						<label for="star5" title=""></label>
+						<input type="radio" id="star4" name="rate" value="4">
+						<label for="star4" title=""></label>
+						<input checked="" type="radio" id="star3" name="rate" value="3">
+						<label for="star3" title=""></label>
+						<input type="radio" id="star2" name="rate" value="2">
+						<label for="star2" title=""></label>
+						<input type="radio" id="star1" name="rate" value="1">
+						<label for="star1" title=""></label>
+					</div>
+          <div class="inputGroup">
+            <textarea id="comment" name="comment" class="comment" class="textarea" rows="3" placeholder="" required=""></textarea>
+            <label for="comment">Ajouter Un commentaire </label>
+          </div>
+          <button class="btn">Publier Votre Avis</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

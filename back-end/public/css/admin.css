@@ -1,0 +1,88 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.ban-button,
+.delete-button {
+  background-color: #00aff5;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.ban-button:hover,
+.delete-button:hover {
+  background-color: red;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  padding: 20px;
+  font-size: 15px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.ban-button,
+.delete-button {
+  background-color: #00aff5;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.ban-button:hover,
+.delete-button:hover {
+  background-color: red;
+}
+.user-row {
+  display: table-row;
+  padding-bottom: 20px;
+}

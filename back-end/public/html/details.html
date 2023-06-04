@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rekebni - Votre Solution de Covoiturage</title>
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" type="text/css" href="/css/details.css" />
+    <link rel="stylesheet" type="text/css" href="/css/details_queries.css" />
+    <link rel="stylesheet" type="text/css" href="/css/general.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar2.css" />
+
+    <!-- ICONION SCRIPT LINKS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- FONT LINK (UBUNTU-All) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image" href="/img/ICON3 1.svg" />
+    <script defer src="/js/details.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="/">
+          <img class="logo" src="../img/LOGO22.png"le Logo de Rekebni" />
+        </a>
+        <nav class="main-nav">
+          <div class="nav-righthand">
+            <a class="quisommenous flex-center" href="../html/quiSommeNous.html">
+              <span class="whitespan">Qui somme nous</span>
+            </a>
+            <!-- <a class="nav-ele" href="#">
+              <ion-icon name="search-outline" class="whiteicon"></ion-icon>
+              <span class="whitespan">Recherche</span>
+            </a> -->
+            <!-- <a class="nav-ele" href="#">
+              <ion-icon name="add-circle-outline" class="whiteicon"></ion-icon>
+              <span class="whitespan">Ajouter un trajet</span>
+            </a> -->
+            <div class="nav-login flex-center hidden">
+              <a class="btn--login flex-center whitespan" href="/login"
+                >se connecter</a
+              >
+              <a class="btn--signup flex-center" href="/signup">s'inscrire</a>
+            </div>
+            <div class="nav-profile">
+              <img class="profile-pic" src="../img/user/default.jpg" id="menu-btn" />
+              <div class="--absolute" style="display: none ; z-index: 999;" id="menu">
+                <div class="profile-menu a">
+                  <!-- <img src="../img/menubbl.png" class="bbl" /> -->
+                  <a
+                    class="profile-menu-ele child"
+                    id="profil"
+                    href="dashboard.html"
+                  >
+                    Mon Profil
+                  </a>
+                  <div class="profile-menu-ele last" id="signout">
+                    Se Déconnecter
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <script>
+          // const parent = document.querySelector(".parent");
+          // const child = parent.querySelector(".a .child");
+
+          // child.addEventListener("mouseover", () => {
+          //   parent.style.backgroundColor = "red";
+          // });
+
+          // child.addEventListener("mouseout", () => {
+          //   parent.style.backgroundColor = "";
+          // });
+
+          const menuBtn = document.querySelector("#menu-btn");
+          const menu = document.querySelector("#menu");
+
+          menuBtn.addEventListener("click", () => {
+            if (menu.style.display === "none") {
+              menu.style.display = "block";
+            } else {
+              menu.style.display = "none";
+            }
+            document.addEventListener("click", (event) => {
+              if (!menu.contains(event.target) && event.target !== menuBtn) {
+                menu.style.display = "none";
+              }
+            });
+          });
+
+          // Close the menu when a click is detected outside of it
+          document.addEventListener("click", (event) => {
+            if (!menu.contains(event.target) && event.target !== menuBtn) {
+              menu.style.display = "none";
+            }
+          });
+        </script>
+      </div>
+      <img class="waves2" src="../img/waves4.png" />
+    </header>
+    <main>
+      <!-- <img src="../img/map.png" class="map" /> -->
+      <section class="section-title">
+        <div class="container main-title">DÉTAILS DU TRAJET</div>
+      </section>
+      <section class="infooo">
+        
+        
+        <!-- <div class="trajet-date container">
+          le
+          <span id="trajet-jour-de-semaine">Mercredi</span>
+          <span id="trajet-jour">13</span>
+          <span id="trajet-mois">Mai</span>
+        </div>
+      </section>
+      <section class="section-trip-map">
+        <div class="trip">
+          <div class="circle c-right"></div>
+          <div class="circle c-left"></div>
+          <div class="line contigue"></div>
+          <div class="line dashed"></div>
+
+          <div class="departure">
+            <span id="city" class="city">ORAN</span>
+            <div class="details">
+              <span class="details-text">départ à</span>
+              <span id="heure-depart" class="details-text">03:00</span>
+            </div>
+          </div>
+          <span id="duration" class="duration">1h30</span>
+          <div class="arrival">
+            <span id="city" class="city">ALGER</span>
+            <div class="details">
+              <span class="details-text">départ à</span>
+              <span id="heure-arrivee" class="details-text">03:00</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-price">
+        <div class="container">
+          <span class="section-title">prix du trajet</span>
+          <div>
+            <span id="prix" class="prix">1250</span>
+            <span class="price">&nbsp;DA / passager</span>
+          </div>
+        </div>
+      </section>
+      <section class="section-driver">
+        <div class="container driver">
+          <span class="section-title">conducteur</span>
+          <div class="driver-profile">
+            <img
+              id="conducteur-photo"
+              class="driver-pfp"
+              src="../img/user/avatar-details.jpg "
+            />
+            <span id="conducteur-nom" class="driver-text">Belhadj</span>
+            <span id="conducteur-prenom" class="driver-text">Mohamed</span>
+            <span class="driver-text">-</span>
+            <img class="star" src="../img/Star.png" />
+            <span id="rating" class="driver-text">3,7</span>
+            <span class="rating">/5</span>
+          </div>
+        </div> -->
+        <div id="loading-spinner-container">
+          <div id="loading-spinner"></div>
+        </div>
+        <div class="container avis">
+          <span class="section-title avis-title">avis</span>
+          <ul class="carousel">
+            <li class="review">
+              <div class="rating-stars">
+                <!-- <img
+                  id="rating-star-1"
+                  src="../img/Star.png"
+                  class="rating-star"
+                />
+                <img
+                  id="rating-star-2"
+                  src="../img/Star.png"
+                  class="rating-star"
+                />
+                <img
+                  id="rating-star-3"
+                  src="../img/Star.png"
+                  class="rating-star"
+                />
+                <img
+                  id="rating-star-4"
+                  src="../img/Star.png"
+                  class="rating-star"
+                />
+                <img
+                  id="rating-star-5"
+                  src="../img/Star.png"
+                  class="rating-star"
+                /> -->
+              </div>
+              <span id="review-texte" class="review-text">
+                “  Auncun avis n'est disponible pour ce conducteur  “
+              </span>
+              <div class="user-info">
+                <img
+                  id="review-photo"
+                  class="review-photo"
+                />
+                <div class="user">
+                  <span id="review-date" class="review-date"></span>
+                  <span id="review-full-name" class="review-full-name"></span>
+                </div>
+              </div> 
+            </li>
+
+            <button class="btn btn--left">
+              <ion-icon name="chevron-back-outline" class="btn-icon">
+              </ion-icon>
+            </button>
+            <button class="btn btn--right">
+              <ion-icon name="chevron-forward-outline" class="btn-icon">
+              </ion-icon>
+            </button>
+          </ul>
+        </div>
+      </section>
+      <section class="section-car">
+        <div class="container">
+          <span class="section-title car-title">details du vehicule</span>
+          <div class="car">
+            <!-- <div class="side">
+              <span class="variable">Vehicule</span>
+              <span class="variable">Matricule</span>
+              <span class="variable">Couleur</span>
+              <span class="variable">Climatisation</span>
+              <span class="variable">Cigarette autorisée</span>
+              <span class="variable">Nombre de Passagers</span>
+            </div>
+            <div class="side r-side">
+              <span id="voiture-nom" class="value">TOYOTA Supra MK4</span>
+              <span id="voiture-matricule" class="value">123-AB-F1C</span>
+              <span id="voiture-couleur" class="value">Noire</span>
+              <span id="voiture-climat" class="value">Oui</span>
+              <span id="voiture-fumer" class="value">Oui</span>
+              <span id="voiture-nbr" class="value">3</span>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <section class="section-phone">
+        <!-- <div class="container"> -->
+          <!-- <span class="section-phone-title"
+            >contactez le conducteur pour se mettre d'accord sur le lieu du
+            RDV</span
+          >
+          <div>
+            <span class="prix">+213&nbsp;</span>
+            <span id="telephone" class="price">549 208 230</span> -->
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container container-confirm">
+          <button class="confirm">
+            Prendre le trajet
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-- Copy Right -->
+      <div class="copyright">
+        <img class="footer-logo" src="../img/LOGOC.svg" />
+        <div class="sm-logos">
+          <a href="#" class="sociallink">
+            <ion-icon name="logo-instagram" class="sm-logo"></ion-icon>
+          </a>
+          <a href="#" class="sociallink">
+            <ion-icon name="logo-facebook" class="sm-logo"></ion-icon>
+          </a>
+          <a href="#" class="sociallink">
+            <ion-icon name="logo-twitter" class="sm-logo"></ion-icon>
+          </a>
+        </div>
+        <span class="copyright-text"
+          >© 2023 Copyright par l'équipe de développement de Rekebni. Tous les
+          droits sont réservés</span
+        >
+      </div>
+      <!-- Contact -->
+      <div class="contact">
+        <h1 class="footer-title">Nous Contacter</h1>
+        <span class="footer-element address"
+          >BP 73, Post Office EL WIAM Sidi Bel Abbés 22016, Algeria</span
+        >
+        <a class="footer-element" href="tel:+213 663 948 303"
+          >+213 663 948 303</a
+        >
+        <a class="footer-element" href="mailto:baghhadi@gmail.com"
+          >baghhadi@gmail.com</a
+        >
+      </div>
+      <div class="resources">
+        <h1 class="footer-title">Resources</h1>
+        <a class="footer-element" href="#">A Propos de Rekebni</a>
+        <a class="footer-element" href="#">FAQ</a>
+        <a class="footer-element" href="#">Confidentialité et Conditions</a>
+      </div>
+    </footer>
+  </body>
+</html>

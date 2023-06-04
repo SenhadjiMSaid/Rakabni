@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/user.css">
+  <style>
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Interface d'administration</h1>
+
+    <div class="search-bar">
+      <input type="text" id="search-input" class="search-input" placeholder="Rechercher un utilisateur...">
+    </div>
+
+    <div class="table-container">
+      <table style="width: 100%;">
+        <thead>
+          <tr>
+            <th></th>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img class="user-photo" src="user1.jpg" alt="Utilisateur 1"></td>
+            <td>1</td>
+            <td>Utilisateur 1</td>
+            <td>user1@example.com</td>
+            <td>
+              <div class="button-group">
+                <button class="delete-button">Supprimer</button>
+                <button class="ban-button">Bloquer</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><img class="user-photo" src="user2.jpg" alt="Utilisateur 2"></td>
+            <td>2</td>
+            <td>Utilisateur 2</td>
+            <td>user2@example.com</td>
+            <td>
+              <div class="button-group">
+                <button class="delete-button">Supprimer</button>
+                <button class="ban-button">Bloquer</button>
+              </div>
+            </td>
+          </tr>
+          <!-- Ajoutez d'autres lignes pour plus d'utilisateurs -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const searchInput = document.getElementById('search-input');
+    const rows = document.querySelectorAll('tbody tr');
+
+    searchInput.addEventListener('input', function(event) {
+      const searchQuery = event.target.value.toLowerCase();
+
+      rows.forEach(row => {
+        const username = row.querySelector('td:nth-child(3)').textContent.toLowerCase();
+        const email = row.querySelector('td:nth-child(4)').textContent.toLowerCase();
+
+        if (username.includes(searchQuery) || email.includes(searchQuery)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

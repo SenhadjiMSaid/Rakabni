@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Compte</title>
+    <link rel="stylesheet" type="text/css" href="../css/general.css" />
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css" />
+
+    <!-- ICONION SCRIPT LINKS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer src="../js/dashboard.js"></script>
+    <!-- FONT LINK (UBUNTU-All) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image" href="/img/ICON3 1.svg" />
+  </head>
+  <body>
+    <section class="menu">
+      <fieldset class="top">
+        <input
+          type="radio"
+          id="profile"
+          name="browse"
+          value="Mon Profil"
+          class="custom-radio"
+          checked
+          onclick="showSection('profile-section')"
+        />
+        <label for="profile" class="menu-item">Mon Profil</label>
+
+        <input
+          type="radio"
+          id="reservation"
+          name="browse"
+          value="Mes Réservations"
+          class="custom-radio"
+          onclick="showSection('reservations-section')"
+        />
+        <label for="reservation" class="menu-item">Mes Réservations</label>
+
+        <input
+          type="radio"
+          id="trip"
+          name="browse"
+          value="Mes Trajets"
+          class="custom-radio"
+          onclick="showSection('trips-section')"
+        />
+        <label for="trip" class="menu-item">Mes Trajets</label>
+
+        <input
+          type="radio"
+          id="reviews"
+          name="browse"
+          value="Mes Avis"
+          class="custom-radio"
+          onclick="showSection('reviews-section')"
+        />
+        <label for="reviews" class="menu-item">Avis Sur Moi</label>
+      </fieldset>
+      <div class="return-container">
+        <a href="/" class="return menu-item">retour à la page d'accueil</a>
+        <span class="menu-item disconnect">Se Déconnecter</span>
+      </div>
+    </section>
+    <section id="profile-section" class="section-content">
+      <div class="head">
+        <div class="head-photo">
+          <img src="" class="head-pfp" />
+          <label for="edit--photo" class="edit--photo special">
+            <ion-icon name="create-outline" class="edit--icon-photo"></ion-icon>
+            <input
+              type="file"
+              accept="image/png, image/jpeg"
+              id="edit--photo"
+            />
+          </label>
+        </div>
+        <div class="head-name">
+          <!-- <span class="head-name-fullname">Felix Lengyel</span> -->
+          <div class="input-parent nogap unshown">
+            <span
+              id="head-name-fullname"
+              class="head-name-fullname unhiddens-text"
+            ></span>
+            <input
+              class="input"
+              type="text"
+              id="prenom"
+              name="name"
+              size="15"
+              placeholder="Votre Prénom"
+            />
+            <input
+              class="input"
+              type="text"
+              id="nom"
+              name="name"
+              size="15"
+              placeholder="Votre Nom de Famille"
+            />
+          </div>
+          <!-- <botton id="edit--name" class="edit--name special">
+            <ion-icon name="create-outline" class="edit--icon"></ion-icon>
+          </botton> -->
+          <botton class="edit--content edit--name">
+            <ion-icon name="create-outline" class="edit--icon"></ion-icon>
+            <span class="button-text">cancel</span>
+          </botton>
+        </div>
+        <div class="head-rating">
+          <div class="head-rating-stars">
+            <img src="../img/Star.png" class="head-rating-star" />
+            <img src="../img/Star.png" class="head-rating-star" />
+            <img src="../img/Star.png" class="head-rating-star" />
+            <img src="../img/half-star.png" class="head-rating-star" />
+            <img src="../img/empty-star.png" class="head-rating-star" />
+          </div>
+          <span class="head-rating-score"></span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="title">
+          mot de passe
+          <botton class="edit--content">
+            <ion-icon name="create-outline" class="edit--icon"></ion-icon>
+            <span class="button-text">cancel</span>
+          </botton>
+        </div>
+        <div class="content dynamic">
+          <!-- <span class="mdp">••••••••</span>  -->
+          <div class="input-parent unshown">
+            <div class="input-father">
+              <div class="input-container">
+                <label for="pass" class="input-label"
+                  >Votre ancien Mot de passe:</label
+                >
+                <input
+                  type="password"
+                  id="pass"
+                  name="password"
+                  class="input"
+                  size="15"
+                />
+              </div>
+              <div class="input-container">
+                <label for="new-mdp" class="input-label"
+                  >Saisisez votre nouveau Mot de passe:
+                </label>
+                <input
+                  type="text"
+                  id="new-mdp"
+                  name="name"
+                  size="15"
+                  class="input"
+                />
+              </div>
+              <div class="input-container">
+                <label for="confirm-pass" class="input-label"
+                  >Confirmez votre ancien mot de passe :</label
+                >
+                <input
+                  type="password"
+                  id="confirm-pass"
+                  name="confirm password"
+                  class="input"
+                  size="15"
+                />
+              </div>
+              <div class="input-container">
+                <label for="confirm-nv-mdp" class="input-label"
+                  >Confirmez votre nouveau Mot de passe:</label
+                >
+                <input
+                  type="text"
+                  id="confirm-new-mdp"
+                  name="name"
+                  size="15"
+                  class="input"
+                />
+              </div>
+            </div>
+            <div class="mdp-error hidden"></div>
+            <button class="confirm-pass-btn">
+              Sauvegarder le mot de passe
+            </button>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="title">
+          pseudonyme
+          <botton class="edit--content">
+            <ion-icon name="create-outline" class="edit--icon"></ion-icon>
+            <span class="button-text">cancel</span>
+          </botton>
+        </div>
+        <div class="content">
+          <div class="input-parent nogap unshown">
+            <span class="unhiddens-text" id="pseudo">ousdjeziri</span>
+            <input class="input" type="text" id="name" name="name" size="25" />
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="title">
+          numéro de telephone
+          <botton class="edit--content">
+            <ion-icon name="create-outline" class="edit--icon"></ion-icon>
+            <span class="button-text">cancel</span>
+          </botton>
+        </div>
+        <div class="content">
+          <div class="input-parent nogap unshown">
+            <span id="telephone" class="unhiddens-text">+213 549 208 230</span>
+            <input class="input" type="text" id="tel" name="name" size="25" />
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="title">
+          adresse e-mail
+          <botton class="edit--content">
+            <ion-icon name="create-outline" class="edit--icon"></ion-icon>
+            <span class="button-text">cancel</span>
+          </botton>
+        </div>
+        <div class="content">
+          <div class="input-parent nogap unshown">
+            <span class="unhiddens-text" id="email"
+              >djezirioussama@gmail.com</span
+            >
+            <input
+              class="input"
+              type="email"
+              id="email"
+              name="name"
+              size="25"
+            />
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="delete--container">
+          <botton class="delete-account disconnect">supprimer le compte</botton>
+        </div>
+      </div>
+      <div class="save-alert put-away">
+        <span>
+          soyez prudent - vous avez des modifications non enregistrées
+        </span>
+        <div>
+          <button class="cancel">annuler</button>
+          <button id="save">sauvegarder</button>
+        </div>
+      </div>
+    </section>
+    <section id="reservations-section" class="section-content">
+      <div class="container">
+        <div class="section-title">Mes Réservations</div>
+        <div class="divider"></div>
+        <div class="reservations"></div>
+      </div>
+    </section>
+    <section id="trips-section" class="section-content">
+      <div class="container">
+        <div class="section-title">Mes Trajets</div>
+        <div class="divider"></div>
+        <div class="trajets"></div>
+      </div>
+    </section>
+    <section id="reviews-section" class="section-content">
+      <div class="container">
+        <div class="section-title">Mes Avis</div>
+        <div class="divider"></div>
+        <div class="avis"></div>
+      </div>
+    </section>
+    <script>
+      function showSection(sectionId) {
+        var sections = document.getElementsByClassName("section-content");
+
+        // Hide all sections
+        for (var i = 0; i < sections.length; i++) {
+          sections[i].style.display = "none";
+        }
+
+        // Show the selected section
+        var section = document.getElementById(sectionId);
+        section.style.display = "block";
+        console.log("displaying : " + sectionId);
+      }
+
+      // Show "My Profile" section on page load
+      window.addEventListener("load", function () {
+        showSection("profile-section");
+      });
+      // space left bellow
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   var trajetElement = document.querySelector(".trajet");
+      //   var trajetBottomElement = document.querySelector(".trajet-bottom");
+
+      //   trajetElement.addEventListener("click", function (event) {
+      //     trajetBottomElement.classList.toggle("open");
+      //   });
+
+      //   document.addEventListener("click", function (event) {
+      //     if (
+      //       !trajetElement.contains(event.target) &&
+      //       trajetBottomElement.classList.contains("open")
+      //     ) {
+      //       trajetBottomElement.classList.remove("open");
+      //     }
+      //   });
+      // });
+      // });
+    </script>
+  </body>
+</html>

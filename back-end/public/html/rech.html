@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rekebni - Votre Solution de Covoiturage</title>
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" type="text/css" href="../css/rech.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../css/quaries.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/general.css" />
+    <!-- ICONION SCRIPT LINKS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- FONT LINK (UBUNTU-All) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image" href="/img/ICON3 1.svg" />
+    <script src="/js/recherche.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="/">
+          <img class="logo" src="../img/LOGO22.png"le Logo de Rekebni" />
+        </a>
+        <nav class="main-nav">
+          <div class="nav-righthand">
+            <a
+              class="quisommenous flex-center"
+              href="../html/quiSommeNous.html"
+            >
+              <span class="whitespan">Qui somme nous</span>
+            </a>
+            <!-- <a class="nav-ele" href="#">
+              <ion-icon name="search-outline" class="whiteicon"></ion-icon>
+              <span class="whitespan">Recherche</span>
+            </a> -->
+            <a class="nav-ele" href="../html/addTrip.html">
+              <ion-icon name="add-circle-outline" class="whiteicon"></ion-icon>
+              <span class="whitespan">Ajouter un trajet</span>
+            </a>
+            <div class="nav-login flex-center hidden">
+              <a class="btn--login flex-center whitespan" href="/login"
+                >se connecter</a
+              >
+              <a class="btn--signup flex-center" href="/signup">s'inscrire</a>
+            </div>
+            <div class="nav-profile">
+              <img
+                class="profile-pic"
+                src="../img/user/default.jpg"
+                id="menu-btn"
+              />
+              <div class="--absolute" style="display: none" id="menu">
+                <div class="profile-menu a">
+                  <!-- <img src="../img/menubbl.png" class="bbl" /> -->
+                  <a
+                    class="profile-menu-ele child"
+                    id="profil"
+                    href="dashboard.html"
+                  >
+                    Mon Profil
+                  </a>
+                  <div class="profile-menu-ele last" id="signout">
+                    Se Déconnecter
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <script>
+          // const parent = document.querySelector(".parent");
+          // const child = parent.querySelector(".a .child");
+
+          // child.addEventListener("mouseover", () => {
+          //   parent.style.backgroundColor = "red";
+          // });
+
+          // child.addEventListener("mouseout", () => {
+          //   parent.style.backgroundColor = "";
+          // });
+
+          const menuBtn = document.querySelector("#menu-btn");
+          const menu = document.querySelector("#menu");
+
+          menuBtn.addEventListener("click", () => {
+            if (menu.style.display === "none") {
+              menu.style.display = "block";
+            } else {
+              menu.style.display = "none";
+            }
+          });
+
+          // Close the menu when a click is detected outside of it
+          document.addEventListener("click", (event) => {
+            if (!menu.contains(event.target) && event.target !== menuBtn) {
+              menu.style.display = "none";
+            }
+          });
+        </script>
+      </div>
+      <img class="waves2" src="../img/waves.png" />
+    </header>
+    <main>
+      <section class="search-results">
+        <!-- <span class="searched-trip-info">
+          <span class="searched-trip-info-depart">Alger</span>
+          <ion-icon name="arrow-forward-outline" class="icon"></ion-icon>
+          <span class="searched-trip-info-arrival">Oran</span>
+          <span> le </span>
+          <span class="searched-trip-info-day">10</span>
+          <span class="searched-trip-info-month">Septembre</span>
+          <span> pour </span>
+          <span class="searched-trip-info-passengers-value">1</span>
+          <span class="searched-trip-info-passengers-text">Personnes</span>
+        </span>
+        <span class="amount-of-results">
+          <span class="amount-of-results-value">999</span>
+          <span class="amount-of-results-text">Résultats</span>
+        </span> -->
+      </section>
+      <section class="filters">
+        <!-- <div>
+          <span class="filter-title">Trier par</span>
+          <div class="order">
+            <div class="filter">
+              <ion-icon
+                name="caret-down-outline"
+                class="filter-icon"
+              ></ion-icon>
+              <span class="filter-name">Prix le plus bas</span>
+            </div>
+            <div class="filter">
+              <ion-icon
+                name="caret-down-outline"
+                class="filter-icon"
+              ></ion-icon>
+              <input
+                type="radio"
+                class="radio-btn"
+                name="Temps de Départ"
+                id="temps"
+              />
+              <label for="temps" class="filter-name">Temps de Départ</label>
+            </div>
+            <div class="filter">
+              <ion-icon
+                name="caret-down-outline"
+                class="filter-icon"
+              ></ion-icon>
+              <span class="filter-name">Durée du Trajet</span>
+            </div>
+          </div>
+        </div> -->
+        <fieldset>
+          <legend class="filter-title">Trier par</legend>
+
+          <label for="filter-price" class="filter-name filter">
+            <input
+              type="radio"
+              id="filter-price"
+              name="trier"
+              value="Prix le plus bas"
+              class="custom-radio"
+            />
+            Prix le plus bas
+          </label>
+
+          <label for="filter-time" class="filter-name filter">
+            <input
+              type="radio"
+              id="filter-time"
+              name="trier"
+              value="Départ le plus tôt"
+              class="custom-radio"
+            />
+            Départ le plus tôt
+          </label>
+
+          <label for="filter-duration" class="filter-name filter">
+            <input
+              type="radio"
+              id="filter-duration"
+              name="trier"
+              value=" Prix le plus chere"
+              class="custom-radio"
+            />
+            Prix le plus chere
+          </label>
+        </fieldset>
+        <!-- <div>
+          <span class="filter-title">Détails</span>
+          <div class="details">
+            <div class="filter">
+              <ion-icon name="radio-button-off-outline" class="filter-icon">
+              </ion-icon>
+              <span class="filter-name">Profile Vérifié</span>
+            </div>
+            <div class="filter">
+              <ion-icon name="radio-button-off-outline" class="filter-icon">
+              </ion-icon>
+              <span class="filter-name">Interdit aux Fumeurs</span>
+            </div>
+          </div>
+        </div> -->
+        <fieldset>
+          <legend class="filter-title">Détails</legend>
+          <label for="filter-ac" class="filter-name filter">
+            <input
+              type="checkbox"
+              id="filter-ac"
+              name="fumer"
+              value="Interdit aux Fumeurs"
+              class="custom-checkbox"
+            />
+            Cigarette Autorisée
+          </label>
+
+          <label for="filter-smoke" class="filter-name filter">
+            <input
+              type="checkbox"
+              id="filter-smoke"
+              name="fumer"
+              value="Interdit aux Fumeurs"
+              class="custom-checkbox"
+            />
+            Voiture Climatisée
+          </label>
+
+          <label for="filter-profile" class="filter-name filter">
+            <input
+              type="checkbox"
+              id="filter-profile"
+              name="fumer"
+              value="Interdit aux Fumeurs"
+              class="custom-checkbox"
+            />
+            Chauffeur Femme
+          </label>
+        </fieldset>
+      </section>
+    </main>
+    <footer>
+      <div class="copyright">
+        <a href="#">
+          <img class="footer-logo" src="../img/LOGO.png" />
+        </a>
+        <div class="sm-logos">
+          <a href="#" class="sociallink">
+            <ion-icon name="logo-instagram" class="sm-logo"></ion-icon>
+          </a>
+          <a href="#" class="sociallink">
+            <ion-icon name="logo-facebook" class="sm-logo"></ion-icon>
+          </a>
+          <a href="#" class="sociallink">
+            <ion-icon name="logo-twitter" class="sm-logo"></ion-icon>
+          </a>
+        </div>
+        <span class="copyright-text"
+          >© 2023 Copyright par l'équipe de développement de Rekebni. Tous les
+          droits sont réservés</span
+        >
+      </div>
+      <div class="contact">
+        <h1 class="footer-title">Nous Contacter</h1>
+        <span class="footer-element address"
+          >BP 73, Post Office EL WIAM Sidi Bel Abbés 22016, Algeria</span
+        >
+        <a class="footer-element" href="tel:+213 663 948 303"
+          >+213 663 948 303</a
+        >
+        <a class="footer-element" href="mailto:baghhadi@gmail.com"
+          >baghhadi@gmail.com</a
+        >
+      </div>
+      <div class="resources">
+        <h1 class="footer-title">Resources</h1>
+        <a class="footer-element" href="#">A Propos de Rekebni</a>
+        <a class="footer-element" href="#">FAQ</a>
+        <a class="footer-element" href="#">Confidentialité et Conditions</a>
+      </div>
+    </footer>
+  </body>
+</html>
+<!-- <script>
+    const imgTargets = document.querySelectorAll("img[data-src]");
+
+    const loadImg = function (entries, observer) {
+      const [entry] = entries;
+
+      if (!entry.isIntersecting) return;
+
+      // Replace src with data-src
+      entry.target.src = entry.target.dataset.src;
+
+      entry.target.addEventListener("load", function () {
+        entry.target.classList.remove("lazy-img");
+      });
+
+      observer.unobserve(entry.target);
+    };
+
+    const imgObserver = new IntersectionObserver(loadImg, {
+      root: null,
+      threshold: 0,
+      rootMargin: "100px",
+    });
+
+    imgTargets.forEach((img) => imgObserver.observe(img));
+  </script>
+</html> -->

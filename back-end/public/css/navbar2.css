@@ -1,0 +1,215 @@
+/* nav {
+    background-image: url(../img/NavBARR.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 10rem;
+    padding: 1rem 10rem 0 10rem;
+    padding-bottom: 3rem;
+    padding: 0 10rem;
+    color: white;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .logo img {
+    width: 40px;
+    align-self: center;
+  }
+  
+  .logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    padding-left: 10px;
+    letter-spacing: -0.5%;
+    text-align: center;
+  }
+
+  .nav-login * {
+    font-size: 1.4rem;
+    transition: all 0.3s;
+  }
+  .btn--login {
+    font-weight: 400;
+    padding: 0 1rem;
+    height: 2rem;
+    color: #fff;
+  }
+
+  .btn--login:hover,
+  .btn--login:active {
+    border-right: 1px solid #00aff5;
+  }
+  .btn--login:visited,
+  .btn--login:link {
+    color: #030045;
+    background-color: #00aff5;
+  }
+  
+  .btn--signup {
+    background-color: #fff;
+    color: #00aff5;
+    border: 1px solid #00aff5;
+    border-radius: 11px;
+    padding: 0.5rem 2rem;
+    margin-left: 1rem;
+    font-weight: 500;
+  }
+  .btn--signup:hover,
+  .btn--signup:active {
+    background-color: #00aff5;
+    color: #030045;
+  } */
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0rem 15rem;
+}
+html {
+  --color: #999;
+  --checked-color: #00aff5;
+  --bg-color: #e8e8e8;
+}
+::selection {
+  background: #72caec;
+}
+
+.icon {
+  align-self: center;
+  color: #030045;
+  vertical-align: text-bottom;
+}
+/* #0f0 */
+/* ****************************** */
+/* HEADER */
+/* ****************************** */
+
+.waves2 {
+  width: 100%;
+  /* height: 100%; */
+  /* display: block; */
+  /* position: absolute; */
+  z-index: -1;
+  vertical-align: middle;
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  /* position: absolute; */
+  transition: all 0.3s;
+  width: 100%;
+  padding: 0 15rem;
+  background-color: #00aff5;
+  /* z-index: 999; */
+  /* position: sticky; */
+  /* top: 0; */
+  /* left: 0; */
+  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+.scrolling {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.logo {
+  height: 6rem;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-left: 4rem;
+}
+.nav-righthand {
+  display: flex;
+  gap: 2rem;
+}
+.nav-ele {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.nav-ele span,
+.quisommenous span {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.whiteicon {
+  margin-top: 0.2rem;
+  transition: all 0.3s;
+  height: 2rem;
+  width: 2rem;
+  color: #fff;
+}
+.nav-ele:hover span,
+.nav-ele:active span,
+.quisommenous:hover span,
+.quisommenous:active span,
+.nav-ele:hover .whiteicon,
+.nav-ele:active .whiteicon {
+  color: #030045;
+}
+
+.nav-login * {
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}
+
+.btn--login {
+  border-right: 1px solid #fff;
+  font-weight: 500;
+  padding: 0 1rem;
+  height: 2rem;
+}
+
+.btn--login:visited,
+.btn--login:link {
+  color: #fff;
+}
+
+.btn--login:hover,
+.btn--login:active {
+  color: #030045;
+}
+
+.btn--signup {
+  border: 3px solid #fff;
+  border-radius: 11px;
+  padding: 0.3rem 2rem;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+.btn--signup:visited,
+.btn--signup:link {
+  color: #00aff5;
+  background-color: #fff;
+}
+
+.btn--signup:hover,
+.btn--signup:active {
+  color: #030045;
+  background-color: #00aff5;
+}
