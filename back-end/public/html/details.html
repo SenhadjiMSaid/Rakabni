@@ -38,7 +38,7 @@
         </a>
         <nav class="main-nav">
           <div class="nav-righthand">
-            <a class="quisommenous flex-center" href="#">
+            <a class="quisommenous flex-center" href="../html/quiSommeNous.html">
               <span class="whitespan">Qui somme nous</span>
             </a>
             <!-- <a class="nav-ele" href="#">
@@ -56,8 +56,16 @@
               <a class="btn--signup flex-center" href="/signup">s'inscrire</a>
             </div>
             <div class="nav-profile">
-              <img class="profile-pic" src="../img/user/default.jpg" id="menu-btn" />
-              <div class="--absolute" style="display: none ; z-index: 999;" id="menu">
+              <img
+                class="profile-pic"
+                src="../img/user/default.jpg"
+                id="menu-btn"
+              />
+              <div
+                class="--absolute"
+                style="display: none; z-index: 999"
+                id="menu"
+              >
                 <div class="profile-menu a">
                   <!-- <img src="../img/menubbl.png" class="bbl" /> -->
                   <a
@@ -119,8 +127,6 @@
         <div class="container main-title">DÉTAILS DU TRAJET</div>
       </section>
       <section class="infooo">
-        
-        
         <!-- <div class="trajet-date container">
           le
           <span id="trajet-jour-de-semaine">Mercredi</span>
@@ -213,18 +219,15 @@
                 /> -->
               </div>
               <span id="review-texte" class="review-text">
-                “  Auncun avis n'est disponible pour ce conducteur  “
+                “ Auncun avis n'est disponible pour ce conducteur “
               </span>
               <div class="user-info">
-                <img
-                  id="review-photo"
-                  class="review-photo"
-                />
+                <img id="review-photo" class="review-photo" />
                 <div class="user">
                   <span id="review-date" class="review-date"></span>
                   <span id="review-full-name" class="review-full-name"></span>
                 </div>
-              </div> 
+              </div>
             </li>
 
             <button class="btn btn--left">
@@ -263,21 +266,59 @@
       </section>
       <section class="section-phone">
         <!-- <div class="container"> -->
-          <!-- <span class="section-phone-title"
+        <!-- <span class="section-phone-title"
             >contactez le conducteur pour se mettre d'accord sur le lieu du
             RDV</span
           >
           <div>
             <span class="prix">+213&nbsp;</span>
-            <span id="telephone" class="price">549 208 230</span> -->
+            <span id="telephone" class="price">549 208 230</span> 
           </div>
-        </div>
+        </div>-->
       </section>
       <section>
         <div class="container container-confirm">
-          <button class="confirm">
+          <button class="confirm" onclick="showConfirmationBox()">
             Prendre le trajet
           </button>
+
+          <!-- Confirmation Box -->
+          <div id="confirmation-box">
+            <div class="overlay"></div>
+            <div class="content">
+              <span
+                onclick="hideConfirmationBox()"
+                style="align-self: flex-end; cursor: pointer"
+                >&#x2716;</span
+              >
+              <h3>Êtes-vous sûr de vouloir effectuer ce trajet&nbsp;?</h3>
+              <div class="button-container">
+                <button class="oui">Oui</button>
+                <button onclick="hideConfirmationBox()">Non</button>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            // Show the confirmation box
+            function showConfirmationBox() {
+              document.getElementById("confirmation-box").style.display =
+                "flex";
+              document.body.style.overflow = "hidden"; // Prevent scrolling
+            }
+
+            // Hide the confirmation box
+            function hideConfirmationBox() {
+              document.getElementById("confirmation-box").style.display =
+                "none";
+              document.body.style.overflow = ""; // Restore scrolling
+            }
+
+            // Navigate to the specified URL
+            function navigateTo(url) {
+              window.location.href = url;
+            }
+          </script>
         </div>
       </section>
     </main>

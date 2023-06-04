@@ -1,12 +1,11 @@
 "use strict";
-const reserverTrajet = document.querySelector(".confirm");
+const reserverTrajet = document.querySelector(".oui");
 var user = JSON.parse(window.localStorage.getItem("userJson"));
 var token = window.localStorage.getItem("userToken");
 var userId;
 if (user) userId = user.id;
 var selectedTrajetId;
 var place;
-
 
 const showProfilePic = function () {
   const userPic = user.photo;
@@ -267,91 +266,93 @@ const star = document.querySelector(".rating-stars");
 let currentItem = 0;
 let reviewsObj = {};
 
-if(!userId) window.location.href="/login" 
- else {
-document.addEventListener("DOMContentLoaded", function () {
-  signOutEventListener() ;
-  showProfilePic() ;
-  selectedTrajetId = localStorage.getItem("selectedTrajetId");
-  console.log(selectedTrajetId);
-  const url = `http://localhost:8000/api/v1/trajets/${selectedTrajetId}`;
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      afficherinfo(data);
-      affichervehicule(data);
-      footer(data);
-      if (data.data.trajet) {
-        reviewsObj = {};
-        data.data.trajet.reviews.forEach((review, index) => {
-          reviewsObj[index] = {
-            date: review.createdAt,
-            id: review.id,
-            review: review.review,
-            rating: review.rating,
-            conducteur: review.conducteur,
-            user: review.user,
-          };
-        });
+if (!userId) window.location.href = "/login";
+else {
+  document.addEventListener("DOMContentLoaded", function () {
+    signOutEventListener();
+    showProfilePic();
+    selectedTrajetId = localStorage.getItem("selectedTrajetId");
+    console.log(selectedTrajetId);
+    const url = `http://localhost:8000/api/v1/trajets/${selectedTrajetId}`;
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        afficherinfo(data);
+        affichervehicule(data);
+        footer(data);
+        if (data.data.trajet) {
+          reviewsObj = {};
+          data.data.trajet.reviews.forEach((review, index) => {
+            reviewsObj[index] = {
+              date: review.createdAt,
+              id: review.id,
+              review: review.review,
+              rating: review.rating,
+              conducteur: review.conducteur,
+              user: review.user,
+            };
+          });
 
-        console.log(reviewsObj);
-      }
-      showPerson(currentItem);
-    })
-    .catch((error) => console.error(error));
-});
+          console.log(reviewsObj);
+        }
+        showPerson(currentItem);
+      })
+      .catch((error) => console.error(error));
+  });
 
-function showPerson(person) {
-  const item = reviewsObj[person];
-  img.src = `../img/user/${item.user.photo}`;
-  fullname.textContent = item.user.name;
-  ladate.textContent = item.date.substring(0, 10);
-  info.textContent = item.review;
-  star.innerHTML = getStarRatingHTML(item.rating);
+  function showPerson(person) {
+    const item = reviewsObj[person];
+    img.src = `../img/user/${item.user.photo}`;
+    fullname.textContent = item.user.name;
+    ladate.textContent = item.date.substring(0, 10);
+    info.textContent = item.review;
+    star.innerHTML = getStarRatingHTML(item.rating);
+  }
+
+  // show next person
+  nextBtn.addEventListener("click", function () {
+    currentItem++;
+    if (currentItem > Object.keys(reviewsObj).length - 1) {
+      currentItem = 0;
+    }
+    showPerson(currentItem);
+  });
+
+  // show prev person
+  prevBtn.addEventListener("click", function () {
+    currentItem--;
+    if (currentItem < 0) {
+      currentItem = Object.keys(reviewsObj).length - 1;
+    }
+    showPerson(currentItem);
+  });
+
+  reserverTrajet.addEventListener("click", async function () {
+    const url = `http://localhost:8000/api/v1/trajets/reserver/${selectedTrajetId}`;
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          passagerId: userId,
+          places: place,
+        }),
+      });
+
+      if (!res.ok)
+        throw new Error(
+          "Something has gone wrong ❌ , please try again later !"
+        );
+
+      await res.json();
+
+      window.location.href = "/html/dashboard.html";
+    } catch (err) {
+      console.error(err.message);
+    }
+  });
 }
-
-// show next person
-nextBtn.addEventListener("click", function () {
-  currentItem++;
-  if (currentItem > Object.keys(reviewsObj).length - 1) {
-    currentItem = 0;
-  }
-  showPerson(currentItem);
-});
-
-// show prev person
-prevBtn.addEventListener("click", function () {
-  currentItem--;
-  if (currentItem < 0) {
-    currentItem = Object.keys(reviewsObj).length - 1;
-  }
-  showPerson(currentItem);
-});
-
-reserverTrajet.addEventListener("click", async function () {
-  const url = `http://localhost:8000/api/v1/trajets/reserver/${selectedTrajetId}`;
-  try {
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({
-        passagerId: userId,
-        places: place,
-      }),
-    });
-
-    if (!res.ok)
-      throw new Error("Something has gone wrong ❌ , please try again later !");
-
-    await res.json();
-
-    window.location.href = "/html/dashboard.html";
-  } catch (err) {
-    console.error(err.message);
-  }
-});
- } ;

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Styles for the confirmation box */
+      #confirmation-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      #confirmation-box .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(8px);
+        z-index: -1;
+      }
+
+      #confirmation-box .content {
+        max-width: 400px;
+        padding: 20px;
+        border: 2px solid #00aff5;
+        border-radius: 10px;
+        background-color: #fff;
+        text-align: center;
+        opacity: 0;
+        transform: scale(0.5);
+        animation: fade-in 0.3s ease-in-out forwards;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #confirmation-box .content h3 {
+        margin-top: 0;
+      }
+
+      #confirmation-box .content .button-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      #confirmation-box .content button {
+        flex: 1;
+        margin: 0 5px;
+      }
+
+      /* Keyframes for the fade-in animation */
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showConfirmationBox()">Prendre le trajet</button>
+
+    <!-- Confirmation Box -->
+    <div id="confirmation-box">
+      <div class="overlay"></div>
+      <div class="content">
+        <span
+          onclick="hideConfirmationBox()"
+          style="align-self: flex-end; cursor: pointer"
+          >&#x2716;</span
+        >
+        <h3>Êtes-vous sûr de vouloir effectuer ce trajet&nbsp;?</h3>
+        <div class="button-container">
+          <button onclick="navigateTo('/')">Oui</button>
+          <button onclick="hideConfirmationBox()">Non</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Show the confirmation box
+      function showConfirmationBox() {
+        document.getElementById("confirmation-box").style.display = "flex";
+        document.body.style.overflow = "hidden"; // Prevent scrolling
+      }
+
+      // Hide the confirmation box
+      function hideConfirmationBox() {
+        document.getElementById("confirmation-box").style.display = "none";
+        document.body.style.overflow = ""; // Restore scrolling
+      }
+
+      // Navigate to the specified URL
+      function navigateTo(url) {
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>

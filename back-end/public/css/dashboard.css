@@ -486,7 +486,11 @@ body {
 .result + .past {
   cursor: auto;
 }
-
+.reserved-tel{
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 700;
+}
 .driver-info {
   display: flex;
   align-items: center;

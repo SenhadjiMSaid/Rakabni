@@ -1,187 +1,185 @@
 html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-    --color: #999;
-    --checked-color: #00aff5;
-    --bg-color: #e8e8e8;
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-  }
-  body {
-    margin: 0px;
-    font-family: "ubuntu", sans-serif;
-  }
+  font-size: 62.5%;
+  overflow-x: hidden;
+  --color: #999;
+  --checked-color: #00aff5;
+  --bg-color: #e8e8e8;
+}
 
-  .container {
-    /* align-self: center; */
-    max-width: 100rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 4fr 4fr;
-    align-items: center;
-    gap:1rem;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  margin: 0px;
+  font-family: "ubuntu", sans-serif;
+}
 
-  .ilustration {
-    padding: 5rem 0;
-  }
-  
-  .ilustration img {
-    width: 100%;
-  }
+.container {
+  /* align-self: center; */
+  max-width: 100rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+  align-items: center;
+  gap: 1rem;
+}
 
-  form{
-    border: 5px solid #00aff5;
-    border-radius: 39px;
-    padding: 5rem 4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    
-  }
+.ilustration {
+  padding: 5rem 0;
+}
 
-  .texte {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
+.ilustration img {
+  width: 100%;
+}
 
-  .texte-title {
-    font-weight: 500;
-    font-size: 3rem;
-    color: #030045;
-    margin-bottom: 1rem;
-  }
-  
-  .texte-text {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #a0a0a0;
-  }
+form {
+  border: 5px solid #00aff5;
+  border-radius: 39px;
+  padding: 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
 
-  .invalid {
-    border: 2px solid #00aff5;
-    border-radius: 50px;
-    padding: 0.7rem;
-    padding-left: 1.1rem !important;
-    display: none; 
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .invalid-text {
-    font-weight: 500;
-    font-size: 1.15rem;
-    color: rgb(233, 12, 12);
-  }
-  .invalid-icon {
-    height: 3rem;
-    width: 3rem;
-    color: rgb(233, 12, 12);
-  }
+.texte {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
 
-  .input {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .inputGroup {
-    width: 100%;
-    height: fit-content;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .inputGroup input {
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    outline: none;
-    border: 2px solid rgb(200, 200, 200);
-    border-radius: 20px;
-    width: 100%;
-  }
-  
-  .inputGroup label {
-    font-size: 1.5rem;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    transition: all 0.3s ease;
-    color: #030045;
-  }
-  
-  .inputGroup :is(input:focus, input:valid) ~ label {
-    font-size: 1.7rem;
-    top: 0%;
-    left: 0%;
-    transform: translateY(-50%) scale(1);
-    margin-left: 2rem;
-    margin-top: 0px;
-    background-color: #ffffff;
-  }
-  .inputGroup :is(input:focus, input:valid) {
-    border-color: #030045;
-  }
+.texte-title {
+  font-weight: 500;
+  font-size: 3rem;
+  color: #030045;
+  margin-bottom: 1rem;
+}
 
-  .btn{
-    padding: 1rem 4rem;
-    width: 100%;
-    color: white;
-    background-color: #00aff5;
-    border-radius: 50px;
-    border: 2px solid #00aff5;
-    font-size: large;
-    font-weight: 500px;
-    display: flex;
-    justify-content: center;
-    font-family: "ubuntu", sans-serif;
-    cursor: pointer;
-    align-self: flex-end;
-    transition: all ease-in-out 0.4s;
-  }
+.texte-text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #a0a0a0;
+}
 
-  .btn:hover{
-    background-color: white;
-    color: #030045;
-  }
+.invalid {
+  border: 2px solid #00aff5;
+  border-radius: 50px;
+  padding: 0.7rem;
+  padding-left: 1.1rem !important;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.invalid-text {
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: rgb(233, 12, 12);
+}
+.invalid-icon {
+  height: 3rem;
+  width: 3rem;
+  color: rgb(233, 12, 12);
+}
 
-  .valid {
-    border: 2px solid #00aff5;
-    border-radius: 50px;
-    padding: 0.7rem;
-    padding-left: 1.1rem !important;
-    display: none;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .valid-text {
-    font-weight: 500;
-    font-size: 1.15rem;
-    color: #00aff5;
-  }
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.inputGroup {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 
-  .valid-text a {
-    font-weight: 500;
-    font-size: 1.15rem;
-    color: #00aff5;
-    text-decoration: underline;
-  }
+.inputGroup input {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  border-radius: 20px;
+  width: 100%;
+}
 
+.inputGroup label {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: #030045;
+}
 
-  .valid-icon {
-    height: 3rem;
-    width: 3rem;
-    color: #00aff5;
-  }
+.inputGroup :is(input:focus, input:valid) ~ label {
+  font-size: 1.7rem;
+  top: 0%;
+  left: 0%;
+  transform: translateY(-50%) scale(1);
+  margin-left: 2rem;
+  margin-top: 0px;
+  background-color: #ffffff;
+}
+.inputGroup :is(input:focus, input:valid) {
+  border-color: #030045;
+}
+
+.btn {
+  padding: 1rem 4rem;
+  width: 100%;
+  color: white;
+  background-color: #00aff5;
+  border-radius: 50px;
+  border: 2px solid #00aff5;
+  font-size: large;
+  font-weight: 500px;
+  display: flex;
+  justify-content: center;
+  font-family: "ubuntu", sans-serif;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: all ease-in-out 0.4s;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #030045;
+}
+
+.valid {
+  border: 2px solid #00aff5;
+  border-radius: 50px;
+  padding: 0.7rem;
+  padding-left: 1.1rem !important;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.valid-text {
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: #00aff5;
+}
+
+.valid-text a {
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: #00aff5;
+  text-decoration: underline;
+}
+
+.valid-icon {
+  height: 3rem;
+  width: 3rem;
+  color: #00aff5;
+}

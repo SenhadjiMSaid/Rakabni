@@ -224,6 +224,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     await sortTrajetsOuReservations(reservations) ;
     const reservationsContainer = document.querySelector(".reservations");
     reservations.forEach(async function(reservation){
+      console.log(reservation) ;
       if (reservation.Conducteur) {
         const numberOfReviews = reservation.reviews.length ;
         const date = new Date(reservation.date);
@@ -259,6 +260,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                    <span class="reviews-value white">${numberOfReviews}</span>
                    <span class="reviews-text white"> Avis</span>
                  </span>
+                 <div class="reserved-tel">${reservation.Conducteur.phone}</div>
                </div>
              </div>
              <div class="trip-info">
@@ -472,6 +474,7 @@ const fileInput = document.getElementById('edit--photo');
 const profilePhoto = document.querySelector('.head-pfp');
 
 fileInput.addEventListener('change', async (event) => {
+  window.onbeforeunload = () => 'Êtes-vous sûr de vouloir quitter cette page ?';
   const file = event.target.files[0];
   if (file) {
     const formData = new FormData();
@@ -488,15 +491,26 @@ fileInput.addEventListener('change', async (event) => {
     }) ;
 
       if (response.ok) {
-        profilePhoto.src = URL.createObjectURL(file) ;
-        console.log(formData);
-        console.log(URL.createObjectURL(file))
+        const url = `http://localhost:8000/api/v1/users/${userId}`;
+        const res = await fetch(url, {
+          method: "GET",
+          headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+             },
+             });
+
+  let photo = (await res.json()).data.doc.photo ; // array of current user trajets;
+        profilePhoto.src = await URL.createObjectURL(file) ;
+        userPic = photo ;
         updateUser() ;
+        window.onbeforeunload =  undefined ; 
       } else {
-        console.error('Error uploading photo');
+        throw new Error('Error uploading photo');
       }
     } catch (error) {
-      console.error('Error uploading photo:', error);
+      console.error(error.message);
+      window.onbeforeunload =  undefined ;
     }
   }
 });
