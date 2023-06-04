@@ -7,6 +7,7 @@ if (user) userId = user.id;
 var selectedTrajetId;
 var place;
 
+
 const showProfilePic = function () {
   const userPic = user.photo;
   document
@@ -266,7 +267,11 @@ const star = document.querySelector(".rating-stars");
 let currentItem = 0;
 let reviewsObj = {};
 
+if(!userId) window.location.href="/login" 
+ else {
 document.addEventListener("DOMContentLoaded", function () {
+  signOutEventListener() ;
+  showProfilePic() ;
   selectedTrajetId = localStorage.getItem("selectedTrajetId");
   console.log(selectedTrajetId);
   const url = `http://localhost:8000/api/v1/trajets/${selectedTrajetId}`;
@@ -349,3 +354,4 @@ reserverTrajet.addEventListener("click", async function () {
     console.error(err.message);
   }
 });
+ } ;

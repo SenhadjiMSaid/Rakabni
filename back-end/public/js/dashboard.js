@@ -19,6 +19,7 @@ if (user) {
 }
 
 
+
 const sortTrajetsOuReservations = function(trajets){
   trajets.sort((a,b)=>{
     const date1 = new Date(a.date) ;
@@ -137,7 +138,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       passagers.forEach((passager) => {
         htmlP += `<div class="passager-info">
         <img class="passager-pfp" src="../img/user/${passager.photo}" />
-        <span class="passager-name">${passager.name}}</span>
+        <span class="passager-name">${passager.name}</span>
       </div>`;
       });
       const html = `<div class="trajet ${trajet.isActive ? "" : "past"} ">
@@ -468,7 +469,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       // userPic = "default.jpg" ;
 
 const fileInput = document.getElementById('edit--photo');
-const profilePhoto = document.getElementById('head-pfp');
+const profilePhoto = document.querySelector('.head-pfp');
 
 fileInput.addEventListener('change', async (event) => {
   const file = event.target.files[0];
@@ -481,15 +482,16 @@ fileInput.addEventListener('change', async (event) => {
        const response = await fetch(url,{
         method: "PATCH",
         headers: {
-          "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`,
         },
-        body: JSON.stringify({
-           photo:formData ,
-        })}) ;
+        body:formData ,
+    }) ;
 
       if (response.ok) {
         profilePhoto.src = URL.createObjectURL(file) ;
+        console.log(formData);
+        console.log(URL.createObjectURL(file))
+        updateUser() ;
       } else {
         console.error('Error uploading photo');
       }
