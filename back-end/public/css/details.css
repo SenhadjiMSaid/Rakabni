@@ -260,98 +260,7 @@ html {
   color: #030045;
   background-color: #00aff5;
 }
-/* #0f0 */
-/* //////////////////////////// */
-/* PROFIL CSS HANDING */
-/* //////////////////////////// */
-.nav-profile {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0px;
-}
-.profile-pic {
-  height: 5rem;
-  width: 5rem;
-  border: 3px solid #030045;
-  border-radius: 999px;
-  cursor: pointer;
-}
-.profile-menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 7rem;
-  top: 7rem;
-  max-width: 22rem;
-  border-radius: 1.3rem 1.3rem 1.3rem 1.3rem;
-  /* Clip the box shadows to container */
-  overflow: hidden;
-  /* Add box shadows */
-  transition: all 0.5s;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
-}
-.bbl {
-  width: 100%;
-}
-.profile-menu-ele {
-  background-color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-  position: relative;
-  font-size: 1.7rem;
-  font-weight: 500;
-  color: red;
-  cursor: pointer;
-}
-.profile-menu-ele:hover,
-.profile-menu-ele:active {
-  background-color: #daf4ff;
-}
 
-.profile-menu-ele:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #ccc;
-}
-.profile-menu-ele:not(:last-child) {
-  color: #030045;
-}
-/* .last {
-    padding-bottom: 0px;
-  } */
-/* .--absolute::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 2rem solid transparent;
-    border-right: 2rem solid transparent;
-    border-bottom: 2rem solid #daf4ff;
-    display: block;
-    transform: translateX(0.5rem);
-  } */
-.--absolute::before + .profile-menu-ele:hover {
-  background-color: #c3e5f3;
-}
-/* .--absolute::after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 50px solid #000;
-    display: block;
-    height: 1rem;
-    width: 2rem;
-    background-color: #d8d8d8;
-  } */
-
-/* .child {
-    padding-top: 0px;
-  } */
 main {
   padding-top: 3rem !important;
   gap: 5rem !important;
@@ -426,7 +335,7 @@ main {
 /* ******************************* */
 /* DRIVER */
 /* ******************************* */
-.container{
+.container {
   padding: 0 !important;
 }
 .driver-profile {
@@ -485,13 +394,12 @@ main {
 }
 
 .rating-stars {
-    align-self: center;
+  align-self: center;
   display: flex;
   gap: 0.3rem;
 }
 
 .rating-star {
-
   height: 3rem;
   width: 3rem;
 }
@@ -522,7 +430,7 @@ main {
 .review-full-name {
   font-size: 2rem;
 }
-.user-info{
+.user-info {
   display: flex;
   gap: 1rem;
   align-self: center;
@@ -592,7 +500,8 @@ main {
 /* ******************************* */
 /* CAR */
 /* ******************************* */
-.car-title, .avis-title{
+.car-title,
+.avis-title {
   justify-content: center;
 }
 .car {
@@ -620,7 +529,7 @@ main {
   font-size: 2.5rem;
   font-weight: 300;
 }
-.confirm{
+.confirm {
   padding: 2rem 3rem;
   background-color: #00aff5;
   border-radius: 15px;
@@ -628,21 +537,113 @@ main {
   transition: all 0.3s;
   cursor: pointer;
 }
-.confirm:hover ,.confirm:active{
+.confirm:hover,
+.confirm:active {
   box-shadow: 0px 10px 25px #44444486;
   transform: translateY(-10px);
   color: #fff;
-    padding: 2.2rem 3.2rem;
-      font-size: 3.2rem;
+  padding: 2.2rem 3.2rem;
+  font-size: 3.2rem;
 }
-.confirm:active{
+.confirm:active {
   transform: translateY(-2px);
 }
-.container-confirm{
+.container-confirm {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 8.5rem;
+}
+
+/* #0f0 */
+/* ****************************** */
+/* POP UP BOX STYLING*/
+/* ****************************** */
+/* Styles for the confirmation box */
+#confirmation-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#confirmation-box .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  z-index: -1;
+}
+.content span {
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 2.2rem;
+  color: red;
+  position: absolute;
+  right: 1.4rem;
+  top: 0.7rem;
+}
+#confirmation-box .content {
+  padding: 3rem 10rem;
+  border: 5px solid #00aff5;
+  border-radius: 27px;
+  background-color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: fade-in 0.3s ease-in-out forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+}
+
+#confirmation-box .content h3 {
+  margin-top: 0;
+  font-size: 3.2rem;
+}
+
+#confirmation-box .content .button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+}
+
+#confirmation-box .content button {
+  flex: 1;
+  height: 5rem;
+  font-size: 2rem;
+  border: 3px solid #00aff5;
+  background-color: #00aff5;
+  color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#confirmation-box .content button:hover,
+#confirmation-box .content button:active {
+  background-color: #fff;
+  color: #00aff5;
+}
+/* Keyframes for the fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 /* #0f0 */
 /* ****************************** */
@@ -651,7 +652,7 @@ main {
 footer {
   padding-top: 15rem !important;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   max-width: 120rem;
   margin: 0 auto;
   gap: 2rem;
@@ -718,7 +719,7 @@ footer {
   display: flex;
   align-items: center;
 }
-#loading-spinner-container {
+/* #loading-spinner-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -732,7 +733,7 @@ footer {
   border: 4px solid #f3f3f3;
   border-top: 4px solid #3498db;
   border-radius: 50%;
-  animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
   position: absolute;
   top: 30%;
   left: 50%;
@@ -746,4 +747,4 @@ footer {
   100% {
     transform: rotate(360deg);
   }
-}
+} */

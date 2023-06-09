@@ -1,6 +1,6 @@
 footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     max-width: 120rem;
     margin: 0 auto;
     padding: 10rem 7rem;

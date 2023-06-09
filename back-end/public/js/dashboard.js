@@ -19,6 +19,7 @@ if (user) {
 }
 
 
+
 const sortTrajetsOuReservations = function(trajets){
   trajets.sort((a,b)=>{
     const date1 = new Date(a.date) ;
@@ -113,7 +114,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   };
 
   profilTabInfos();
-  console.log(user);
 
   const trajetsContainer = document.querySelector(".trajets");
   const url = `http://localhost:8000/api/v1/trajets/conducteur/${userPseudo}`;
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       passagers.forEach((passager) => {
         htmlP += `<div class="passager-info">
         <img class="passager-pfp" src="../img/user/${passager.photo}" />
-        <span class="passager-name">${passager.name}}</span>
+        <span class="passager-name">${passager.name}</span>
       </div>`;
       });
       const html = `<div class="trajet ${trajet.isActive ? "" : "past"} ">
@@ -258,6 +258,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                    <span class="reviews-value white">${numberOfReviews}</span>
                    <span class="reviews-text white"> Avis</span>
                  </span>
+                 <div class="reserved-tel">${reservation.Conducteur.phone}</div>
                </div>
              </div>
              <div class="trip-info">
@@ -362,7 +363,6 @@ document.addEventListener("DOMContentLoaded", async function () {
    const passagers = (await res1.json()).data.trajet.Passagers ;
 
   await passagers.forEach(async(psg)=> {
-    console.log(psg) ;
     const res2 = await fetch("http://localhost:8000/api/v1/users/annuler", {
     method: "POST",
     headers: {
@@ -372,7 +372,6 @@ document.addEventListener("DOMContentLoaded", async function () {
       email: psg.email,
     }),
   });
-   console.log(res2);
 }) ;
  
         const res = await fetch(
@@ -468,9 +467,10 @@ document.addEventListener("DOMContentLoaded", async function () {
       // userPic = "default.jpg" ;
 
 const fileInput = document.getElementById('edit--photo');
-const profilePhoto = document.getElementById('head-pfp');
+const profilePhoto = document.querySelector('.head-pfp');
 
 fileInput.addEventListener('change', async (event) => {
+  window.onbeforeunload = () => 'Êtes-vous sûr de vouloir quitter cette page ?';
   const file = event.target.files[0];
   if (file) {
     const formData = new FormData();
@@ -481,46 +481,35 @@ fileInput.addEventListener('change', async (event) => {
        const response = await fetch(url,{
         method: "PATCH",
         headers: {
-          "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`,
         },
-        body: JSON.stringify({
-           photo:formData ,
-        })}) ;
+        body:formData ,
+    }) ;
 
       if (response.ok) {
-        profilePhoto.src = URL.createObjectURL(file) ;
+        const url = `http://localhost:8000/api/v1/users/${userId}`;
+        const res = await fetch(url, {
+          method: "GET",
+          headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+             },
+             });
+
+  let photo = (await res.json()).data.doc.photo ; 
+        profilePhoto.src = await URL.createObjectURL(file) ;
+        userPic = photo ;
+        updateUser() ;
+        window.onbeforeunload =  undefined ; 
       } else {
-        console.error('Error uploading photo');
+        throw new Error('Error uploading photo');
       }
     } catch (error) {
-      console.error('Error uploading photo:', error);
+      console.error(error.message);
+      window.onbeforeunload =  undefined ;
     }
   }
 });
-
-
-
-
-
-
-
-
-
-      // document.querySelector(".head-pfp").src = `../img/user/${userPic}` ;
-      // const url = `http://localhost:8000/api/v1/users/updateMe` ;
-    /*  const res = await fetch(url,{
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-           photo:userPic ,
-        }),
-      }) ;
-      console.log(res) ;
-      if (res.ok) updateUser() ; */
 
   } ;
 
@@ -634,8 +623,9 @@ fileInput.addEventListener('change', async (event) => {
 
       if(nomComplet) userName = nomComplet ;
       if (pseudoInput) userPseudo = pseudoInput ;
-      if (telephoneInput && telephoneInput.length==10) userPhone = telephoneInput ;
-      if (emailInput) userEmail = emailInput ;
+      if (telephoneInput && telephoneInput.length==10 && telephoneInput.charAt(0) == "0" &&
+      ["5", "6", "7"].includes(telephoneInput.charAt(1))) userPhone = telephoneInput ;
+      if (emailInput ) userEmail = emailInput ;
       try{
       const url = `http://localhost:8000/api/v1/users/updateMe` ;
       const res = await fetch(url,{
@@ -652,7 +642,6 @@ fileInput.addEventListener('change', async (event) => {
         }),
       }) ;
 
-      console.log(res) ;
 
       if(res.ok){
         hideModifyContainers() ;

@@ -7,7 +7,7 @@ module.exports = class Email {
     this.to = user.email;
     this.url = url;
     this.firstName = user.name;
-    this.from = `WASSELNI <${process.env.EMAIL_FROM}>`;
+    this.from = `REKEBNI <${process.env.EMAIL_FROM}>`;
   }
 
   newTransport() {
@@ -49,9 +49,9 @@ module.exports = class Email {
   }
 
   async sendWelcome() {
-    const subject = "Welcome to the WASSELNI Family!";
+    const subject = "Welcome to the REKEBNI Family!";
 
-    const text = `Dear ${this.firstName},\n\nWelcome to the WASSELNI Family! Please click on the following link to get started:\n${this.url}\n\nBest regards,\nWASSELNI Team`;
+    const text = `Dear ${this.firstName},\n\nWelcome to the REKEBNI Family! Please click on the following link to get started:\n${this.url}\n\nBest regards,\REKEBNI Team`;
 
     const html = fs.readFileSync(
       "back-end/public/html/welcomemail.html",
@@ -65,7 +65,7 @@ module.exports = class Email {
   async sendPasswordReset() {
     const subject = `Your password reset token (valid for only 10 minutes)`;
 
-    const text = `Dear ${this.firstName},\n\nYou have requested to reset your password. Please click on the following link to reset it (valid for only 10 minutes):\n${this.url}\n\nIf you didn't request this, please ignore this email.\n\nBest regards,\nWASSELNI Team`;
+    const text = `Dear ${this.firstName},\n\nYou have requested to reset your password. Please click on the following link to reset it (valid for only 10 minutes):\n${this.url}\n\nIf you didn't request this, please ignore this email.\n\nBest regards,\REKEBNI Team`;
 
     const html1 = fs.readFileSync(
       "back-end/public/html/réinitialisermdp.html",

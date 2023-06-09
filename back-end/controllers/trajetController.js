@@ -64,7 +64,7 @@ exports.getUserReservations = catchAsync(async (req, res, next) => {
   const id = req.params.id;
   const trajet = await Trajet.find({ Passagers: id })
     .populate("Passagers")
-    .populate("Conducteur", "name photo ratingsAverage")
+    .populate("Conducteur", "name photo ratingsAverage phone ")
     .populate("reviews");
   res.status(200).json({
     //to resive tours const array

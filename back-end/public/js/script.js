@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
     trajetsBtns.forEach(btn=>{
       btn.addEventListener("click",function(){
         const locations = btn.querySelectorAll(".trajet-text") ;
-        const depart=locations[0].textContent.toUpperCase().split(" ").join("-");
-        const destination = locations[1].textContent.toUpperCase().split(" ").join("-") ; 
+        const depart=locations[0].textContent ;
+        const destination = locations[1].textContent ;
         if (depart && destination ){
           departMenu.value = depart ;
           destinationMenu.value = destination ;
@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const recherche = document.querySelector(".searchbar-btn");
   recherche.addEventListener("click", async (event) => {
     event.preventDefault();
+  
     const departs = document.getElementById("departs");
     const departSelection = departs.options[departs.selectedIndex].value;
     const arriver = document.getElementById("arrives");
@@ -64,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const passager = document.getElementById("passengers").value;
     var passengersSelect = document.getElementById("passengers");
     var selectedPassengers = passengersSelect.value;
+    localStorage.removeItem("selectedPassengers") ;
     localStorage.setItem("selectedPassengers", selectedPassengers);
     const url = `http://localhost:8000/api/v1/trajets?&Depart=${departSelection}&Arrivée=${arriveSelection}&date=${dateValue}&places[gte]=${passager}`;
     var passengersSelect = document.getElementById("passengers");
@@ -94,30 +96,23 @@ function revealOnScroll() {
   }
 }
 window.addEventListener("scroll", revealOnScroll);
-const messages = [
-  "Faites un geste pour l'environnement",
-  "et voyagez en toute sérénité.",
-];
+// Sélectionner l'élément de texte
+const heroSubtext = document.getElementById("hero-subtext");
+// Obtenir le texte à afficher
+const text = heroSubtext.innerText;
 
-const textElement = document.querySelector(".hero-subtext");
-let currentMessageIndex = 0;
-let currentCharacterIndex = 0;
+heroSubtext.innerText = "";
 
-function typeWriter() {
-  if (currentMessageIndex < messages.length) {
-    const currentMessage = messages[currentMessageIndex];
-
-    if (currentCharacterIndex < currentMessage.length) {
-      textElement.innerHTML += currentMessage.charAt(currentCharacterIndex);
-      currentCharacterIndex++;
-      setTimeout(typeWriter, 50);
-    } else {
-      currentMessageIndex++;
-      currentCharacterIndex = 0;
-      textElement.innerHTML += "<br>"; // Ajoute un saut de ligne après chaque message
-      setTimeout(typeWriter, 500); // Attendre 1 seconde avant d'afficher le message suivant
-    }
+// Fonction pour ajouter progressivement les caractères au texte
+function typeWriter(text, i) {
+  if (i < text.length) {
+    heroSubtext.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(function () {
+      typeWriter(text, i);
+    }, 50); // Temps d'attente entre chaque caractère (50ms)
   }
 }
 
-typeWriter();
+// Appeler la fonction pour démarrer l'effet de typewriter
+typeWriter(text, 0);

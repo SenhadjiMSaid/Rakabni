@@ -1,3 +1,4 @@
+// const valide = document.querySelector("valid-text");
 window.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".passwordrest");
 
@@ -30,14 +31,21 @@ window.addEventListener("DOMContentLoaded", function () {
       });
 
       if (response.ok) {
-        console.log("Changement de mot de passe confirmé avec succès.");
-        const errorMessage = document.createElement("div");
-        errorMessage.classList.add("error-message");
-        errorMessage.textContent =
-          "vous avez changer votre message avec Succes ";
-        // Insertion du message d'erreur dans le document
-        const container = document.querySelector(".invalid-text");
-        container.appendChild(errorMessage);
+        console.log("vous avez changer votre mot de passe avec succes");
+        const valide = document.querySelector(".valid");
+        valide.style.display = "flex";
+        const currentUrl = window.location.href;
+        const currentPathname = window.location.pathname;
+        const detailsUrl = currentUrl.replace(
+          currentPathname,
+          "/html/login.html"
+        );
+        window.location.href = detailsUrl;
+      } else if (!response.ok) {
+        console.log("mot de passe erronné");
+        const notsame = document.querySelector(".invalid");
+
+        notsame.style.display = "flex";
       }
     } catch (error) {
       console.error("Erreur lors de l'envoi de la requête PATCH :", error);

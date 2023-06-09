@@ -137,23 +137,9 @@ section {
   font-weight: 500;
   font-size: 5.5rem;
 }
-/* .hero-subtext {
-  font-weight: 500;
-  font-size: 2.1rem;
-} */
 .hero-subtext {
   font-weight: 500;
   font-size: 2.1rem;
-  white-space: pre-line;
-  overflow: hidden;
-  /* border-right: 0.15em solid #000; Animation du curseur */
-  animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
 }
 
 .searchbar {
@@ -559,7 +545,7 @@ img {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
 }
 .copyright,

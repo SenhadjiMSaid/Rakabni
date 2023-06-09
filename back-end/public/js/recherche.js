@@ -164,7 +164,7 @@ const signOutEventListener = function () {
 function erreur() {
   const errorMessage = document.createElement("div");
   errorMessage.classList.add("error-message");
-  errorMessage.textContent = "Aucun resultat n'est disponible";
+  errorMessage.textContent = "Aucun résultat n'est disponible";
   // Insertion du message d'erreur dans le document
   const container = document.querySelector(".search-results");
   container.appendChild(errorMessage);
