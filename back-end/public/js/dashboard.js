@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       const passagers = trajet.Passagers;
       var htmlP = "";
       passagers.forEach((passager) => {
-        htmlP += `<div class="passager-info"
+        htmlP += `<div class="passager-info">
         <img class="passager-pfp" src="../img/user/${passager.photo}" />
         <span class="passager-name">${passager.name}</span>
       </div>`;
