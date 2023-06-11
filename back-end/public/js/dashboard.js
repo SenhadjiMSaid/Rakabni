@@ -615,7 +615,8 @@ fileInput.addEventListener('change', async (event) => {
       let nomInput = document.getElementById("nom").value ;
       let pseudoInput = document.getElementById("name").value ;      
       let telephoneInput = document.getElementById("tel").value ;
-      let emailInput = document.getElementById("email").value ;
+      let emailInput = document.getElementById("emailInput").value ;
+      console.log(emailInput) ;
       let nomComplet ="" ;
 
       if (prenomInput && nomInput){ nomComplet =`${prenomInput} ${nomInput}`} ;
